@@ -1,0 +1,35 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+
+    title Omny - Teleportation Services for Hire
+      
+    meta(property='og:title', content='Teleport to San Francisco for $100')
+    meta(property='og:description', content='Share your code to be first in line for the alpha release.')
+    meta(property='og:type', content='website')
+    meta(property='og:url', content='http://www.beomny.com')
+    meta(property='og:image', content='https://upload.wikimedia.org/wikipedia/commons/e/ec/SCP_Foundation_(emblem).svg')
+
+    link(type='text/css', rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto:300,400,500')
+
+    //- VENDOR STYLES 
+    link(rel='stylesheet', href='/vendor/bootstrap/dist/css/bootstrap.min.css')
+
+    //- MY STYLES 
+    link(rel='stylesheet', href='/stylesheets/styles.css')
+
+    //- script(src='/vendor/jquery/dist/jquery.min.js', async='', defer='')
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+    script(src='/vendor/bootstrap/dist/js/bootstrap.min.js', async='', defer='')
+
+    //- script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDKk2JgZEwGLEsq11G-NLv8j_vMMT-suzw&libraries=places&callback=initAutocomplete', async='', defer='')
+    script(src='/javascripts/places.js')
+    script(src='/javascripts/referrals.js')
+  body
+    block content
+
+    section.footer
+      .container
+        .text-center Made with love in San Francisco

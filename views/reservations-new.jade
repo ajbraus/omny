@@ -1,0 +1,10 @@
+section
+  .container
+    .row
+      .col-sm-4.col-sm-offset-4
+        legend Schedule Teleportation
+        form(action='/reservations')
+          .form-group
+            label(for='location') Location
+            input#autocomplete.form-control(placeholder='Enter your address', onfocus='geolocate()', type='text')
+    

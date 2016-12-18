@@ -1,0 +1,31 @@
+Signup for Alpha
+
+new reservation
+  - see map with autocomplete, place pin
+  - set autocomplete's bias bounds to the areas we are live
+  - startingAt, endingAt, duration, notes/exact entrance or location
+  - delivery fee, hourly rate
+  - coupon code
+  - signup with verified email to complete
+  - paypal/stripe/apple & google pay
+
+view reservations
+
+Auth
+  app.get("/users/:format?", function(req, res, next){
+    if (req.params.format) { res.json(...); }
+    else {
+      res.render(...); //jade template
+    }
+  });
+
+  JWT auth to web...?
+
+  http://blog.grossman.io/ionic-jwt-auth-with-facebook-using-nodejs-part-1/
+
+
+share with friends and get alpha sooner
+
+API
+
+feedback/reviews

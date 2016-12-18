@@ -1,0 +1,46 @@
+a {
+  color: #00B7FF;
+}
+
+section {
+  min-height:430px;
+  padding: 60px 0;
+}
+
+.jumbotron {
+  border-radius: 0;
+}
+
+.jumbotron h1 {
+  font-size: 3em;
+  margin-bottom:20px;
+}
+
+.host-pic {
+  background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url('/images/light.jpg') no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size:  cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+}
+
+.form-inline .form-group {
+  margin-right: 5px;
+}
+
+.center-div{
+  margin: 0 auto;
+  width:80% /* value of your choice which suits your alignment */
+}
+
+.form-control-lg {
+  padding: 22px 19px;
+  font-size: 22px;
+  font-weight: 100;
+}
+
+.footer {
+  background: black;
+  color: white;
+}

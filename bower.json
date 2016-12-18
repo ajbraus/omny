@@ -1,0 +1,19 @@
+{
+  "name": "omny",
+  "version": "0.0.0",
+  "authors": [
+    "Adam Braus <ajbraus@gmail.com>"
+  ],
+  "moduleType": [
+    "es6",
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
