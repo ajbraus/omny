@@ -1,7 +1,6 @@
 var mongoose = require('mongoose'),
     bcrypt = require('bcryptjs'),
-    Schema = mongoose.Schema,
-    Competency = require('./competency.js')
+    Schema = mongoose.Schema
 
 // GETTER
 function toLower (v) {

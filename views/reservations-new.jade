@@ -1,10 +1,30 @@
-section
-  .container
-    .row
-      .col-sm-4.col-sm-offset-4
-        legend Schedule Teleportation
-        form(action='/reservations')
-          .form-group
-            label(for='location') Location
-            input#autocomplete.form-control(placeholder='Enter your address', onfocus='geolocate()', type='text')
-    
+extends layout
+
+block content
+  section
+    .container
+      .row
+        .col-sm-4.col-sm-offset-4
+          legend Schedule Teleportation
+          form(action='/reservations')
+            .form-group
+              label(for='city') City
+              select.form-control(name="city")
+                option(value="San Francisco" selected) San Francisco
+            .form-group
+              label(for='location') Location
+              input#autocomplete.form-control(placeholder='Enter your address', onfocus='geolocate()', type='text')
+            .form-group
+              label(for='date') Date
+              input#startsOn.form-control(placeholder='What day will you teleport?', type='text')
+            .form-group
+              label(for='startsAt') Starts At
+              input#startsAt.form-control(placeholder='When will the teleport start?', type='text')
+            .form-group
+              label(for='startsAt') Duration
+              input#duration.form-control(placeholder='3 hrs', type='text')
+            .form-group
+              label(for='location') Instructions
+              textarea.form-control(placeholder='Any special instructions?', type='text')
+
+            button.btn.btn-primary.btn-block Request Teleporation

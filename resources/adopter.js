@@ -6,14 +6,14 @@ function toLower (v) {
   return v.toLowerCase();
 }
 
-// EarlyAdopter SCHEMA
-var EarlyAdopterSchema = new Schema({
+// Adopter SCHEMA
+var AdopterSchema = new Schema({
     createdAt          : Date
   , updatedAt          : Date
   , email              : { type: String, required: true, unique: true, trim: true, set: toLower }
   , referralToken      : String
 
-  , referrals          : [{ type: Schema.Types.ObjectId, ref: 'EarlyAdopter' }]
+  , referrals          : [{ type: Schema.Types.ObjectId, ref: 'Adopter' }]
 }, {
   toObject: {
   virtuals: true
@@ -23,7 +23,7 @@ var EarlyAdopterSchema = new Schema({
   }
 })
 
-EarlyAdopterSchema.pre('save', function(next){
+AdopterSchema.pre('save', function(next){
   // SET createdAt AND updatedAt
   now = new Date();
   this.updatedAt = now;
@@ -32,6 +32,6 @@ EarlyAdopterSchema.pre('save', function(next){
   }
 });
 
-var EarlyAdopter = mongoose.model('EarlyAdopter', EarlyAdopterSchema);
+var Adopter = mongoose.model('Adopter', AdopterSchema);
 
-module.exports = EarlyAdopter;
+module.exports = Adopter;

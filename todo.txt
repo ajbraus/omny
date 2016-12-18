@@ -1,4 +1,5 @@
 Signup for Alpha
+  - can's save early-adopter...
 
 new reservation
   - see map with autocomplete, place pin

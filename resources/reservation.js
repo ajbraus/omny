@@ -15,7 +15,6 @@ var ReservationSchema = new Schema({
   , postal_code                   : { type: String }
 
   , startsAt                      : Date
-  , endsAt                        : Date
   , seconds                       : Number
 
   , priceInCents                  : Number

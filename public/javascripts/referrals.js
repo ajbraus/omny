@@ -1,12 +1,12 @@
 $(document).ready(function() {
-  console.log('hello')
-  $('#earlyAdopterForm').submit(function(e) {
+
+  $('#adopterForm').submit(function(e) {
     e.preventDefault();
     
     var formData = $(this).serialize();
     console.log(formData)
 
-    $.post('/early-adopters', formData)
+    $.post('/adopters', formData)
         .done(function(data){ 
           console.log(data);
         })

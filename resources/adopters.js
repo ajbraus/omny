@@ -1,9 +1,10 @@
 var express = require('express');
 var router = express.Router();
-var EarlyAdopter = require('./early-adopter.js');
+
+var Adopter = require('./adopter.js');
 
 router.get('/', function(req, res, next) {
-  res.render('early-adopters-index')
+  res.render('adopters-index')
 });
 
 router.post('/', function(req, res, next) {
@@ -16,14 +17,14 @@ router.post('/', function(req, res, next) {
   }
   req.body.referralToken = token;
 
-  earlyAdopter = new EarlyAdopter(req.body);
+  adopter = new Adopter(req.body);
 
   // SAVE 
-  earlyAdopter.save(function(err, earlyAdopter) {
+  adopter.save(function(err, adopter) {
     if (err) { return res.status(400).send(err) }
 
-    console.log(earlyAdopter)
-    res.send(earlyAdopter);
+    console.log(adopter)
+    res.send(adopter);
   });
 });
 
