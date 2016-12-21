@@ -1,0 +1,24 @@
+extends layout
+
+block vars
+  - var titleText = "The Daily Chai - Golden Chai";
+  - var descriptionText = 'Learn ayurvedic remedies, delicious recipes, hear Golden Chai news, and get deals.';
+
+block content 
+  br
+  br
+  .container
+    .text-center
+      h1 The Daily Chai
+      .lead.text-muted The Blog of #[a(href="/") Golden Chai]
+      br
+    .row
+      .col-sm-8.col-sm-offset-2
+        each post in posts
+          a(href="/blog/#{post.slug}")
+            img.img-responsive(src="/images/backgrounds/#{post.backgroundUrl}" width="100%")
+          .page-header
+            h3 #{post.title}
+            .lead.text-muted #{post.subtitle}
+            | By #{post.authorName}
+          hr

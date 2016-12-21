@@ -1,7 +1,14 @@
 extends layout
 
+block vars
+  - var titleText = "Omny - Teleport for $100";
+  - var descriptionText = "Be present anywhere in the San Francisco Bay Area. Instantly.";
+  - var ogImageFile = "host.jpg"
+
 block content
   section.jumbotron.host-pic.text-center
+    br
+    br
     h1 
       | Teleportation Services For Hire
     .lead
@@ -12,35 +19,44 @@ block content
     br
     br
     br
+    br
+    br
+    br
     .row
       .col-xs-8.col-xs-offset-2
-        form#earlyAdopterForm.form-inline
+        form#adopter-form.form-inline
           .form-group
             input.form-control.form-control-lg(name="email" autofocus="true" placeholder='jane.doe@gmail.com')
           button.btn.btn-lg.btn-primary(type='submit') Join
 
     br
-    | Sign up to join the private alpha
+    .lead Sign up to join the private alpha
   
     //- br
     //- | Sign up and share your code to try teleportation sooner.
     //- br
     //- | There are 2345 people in line ahead of you.
-    br
-    br
 
   section
     .container
-      h2.text-xs-center How it Works
+      h2.text-center How it Works
       br
       .row
         .col-sm-4
-          h4.text-xs-center 1. Schedule your Trip
-
-          p
+          h2.text-center 
+            i.icon.ion-calendar 
+            | Schedule your Trip
+          br
+          p.lead Make a #[a(href="/reservation/new") reservation] online for 24 hours in the future. You will recieve a confirmation email with the code you'll need to log into your host.
         .col-sm-4
-          h4.text-xs-center 2. Teleport
-          p
+          h2.text-center 
+            i.icon.ion-ios-cloud-download 
+            | Download
+          br
+          p.lead Before your reservation begins download the #[a(href="https://itunes.apple.com/us/app/double/id589230178?mt=8") Double Robotics app] from the app store on your iPhone, iPad, or register an account at #[a(href="https://drive.doublerobotics.com") drive.doublerobotics.com].
         .col-sm-4
-          h4.text-xs-center 3. Connect with Humans
-          p 
+          h2.text-center 
+            i.icon.ion-radio-waves 
+            | Teleport
+          br
+          p.lead At the time of your reservation, use your confirmation code to log into your host and begin. When you are done, stop and complete your review of your experience.

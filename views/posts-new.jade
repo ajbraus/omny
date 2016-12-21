@@ -1,0 +1,37 @@
+extends layout
+
+block vars
+  - var titleText = "New Post";
+  - var descriptionText = 'The Golden Chai Team delivers delicious turmeric chai to you from Denver';
+
+block content
+  br
+  br
+  .container
+    .row
+      .col-sm-12.col-md-8.col-md-offset-2
+        legend New Blog Post
+        form(action="/posts", method="POST")
+          .form-group
+            label Title
+            input.form-control(name="title")
+          .form-group
+            label Subtitle
+            input.form-control(name="subtitle")
+          .form-group
+            label Author Full Name
+            input.form-control(name="authorName")
+          .form-group
+            label Author First Name Lower Case
+            input.form-control(name="authorPicName")
+          .form-group
+            label Background Pic File Name (1400px min width) (send pic to Adam)
+            input.form-control(name="backgroundUrl")
+          .form-group
+            label Post
+            textarea.form-control#postBody(name="body", rows="25")
+          .text-right
+            button.btn.btn-lg.btn-primary Save
+  br
+  br
+  br

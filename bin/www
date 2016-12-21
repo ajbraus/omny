@@ -1,20 +1,18 @@
 #!/usr/bin/env node
-process.env.NODE_ENV = process.env.NODE_ENV || 'development';
-
 
 /**
  * Module dependencies.
  */
 
 var app = require('../server');
-var debug = require('debug')('omny:server');
+var debug = require('debug')('goldenchai:server');
 var http = require('http');
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || 1337);
+var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
 /**

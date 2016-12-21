@@ -1,0 +1,42 @@
+extends layout
+
+block vars
+  - var titleText = "Contact - Golden Chai";
+  - var descriptionText = 'The Golden Chai team is a purveyor of fine, healthy turmeric across this fair land.';
+
+block content
+  header.bowl-three
+    .container
+      .intro-text
+        .intro-lead-in 
+        .intro-heading Contact Us
+  br
+  br
+  .container
+    .row
+      .col-sm-6.col-sm-offset-3
+        form#contact-form
+          .form-group
+            label Subject*
+            input.form-control(name="subject", placeholder="Subject Line", autofocus='true' required)
+          .form-group
+            label Message*
+            textarea.form-control(name="body", rows="8", placeholder="Let us know what's up." required)
+          .form-group
+            .row
+              .col-sm-6
+                label First Name*
+                input.form-control(name="first", placeholder="First Name" required)
+              .col-sm-6
+                label Last Name*
+                input.form-control(name="last", placeholder="Last Name" required)
+          .form-group
+            label Email*
+            input.form-control(name="email", placeholder="john.doe@gmail.com" required)
+          .form-group
+            label Phone Number (optional)
+            input.form-control(name="phone", placeholder="555-555-5555")
+          .text-right
+            button.btn.btn-primary.btn-lg Send 
+  br
+  br

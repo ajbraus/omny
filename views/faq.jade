@@ -1,0 +1,130 @@
+extends layout
+
+block vars
+  - var titleText = "FAQ - Golden Chai";
+  - var descriptionText = 'Golden Chai, inspired by golden milk, is made from fine organic ingredients including turmeric, black pepper, coconut, and ginger.';
+
+block content
+  header.park-chai
+    br
+    br
+    br
+    .container
+      .intro-text
+        .intro-lead-in 
+        h1.intro-heading FAQ
+    br
+    br
+    br
+
+  br
+  br
+  .container.faq
+    .row
+      .col-xs-12.col-md-7.col-md-offset-1
+        .faq_wrap
+          .page-header
+            h2#about About
+          h4 What is Golden Chai?
+          p Golden Chai a turmeric-based chai. When you buy Golden Chai, you receive multiple single- or multiple-serving packets of Golden Chai's potent, all natural mix. Add a serving of Golden Chai mix to a mug, heat up your choice of milk, and pour the milk over your Golden Chai mix. You can add extras like spices like cinnamon and cayenne or your choice of sweetener. Stir and enjoy!
+          h4 Do I need any equipment?
+          p Golden Chai needs no special equipment. Just heat milk on the stove or in the microwave, add it to Golden Chai mix, and Vóila.
+          .embed-responsive.embed-responsive-16by9
+            iframe.embed-responsive-item(src="https://www.youtube.com/embed/dREnxvD6tms" frameborder="0" allowfullscreen)
+        br
+        .faq_wrap
+          .page-header
+            h2#delivery Delivery
+          h4 Where do you deliver?
+          p We currently ship to all of the United States for free.
+          h4 Do you ship internationally?
+          p We do ship internationally. There is an added $15 international shipping fee for all international orders.
+          h4 What do I do if I have a problem with my deliver?
+          p Please contact #[a(href='mailto:info@goldenchai.com') info@goldenchai.com] right away and we will make things right. 
+          br
+        .faq_wrap
+          .page-header
+            h2#ingredient-info Ingredient Information
+          h4 Are Golden Chai's ingredients organic? 
+          p The ingredients in Golden Chai are all organic except two ingredients that we cannot as of yet source organically - vanilla powder and pink salt. For these two, we have sourced high quality, minimially treated substitutes.
+          h4 Where do source your ingredients?
+          p We currently work with a handful of suppliers who offer us the highest quality, organic, ethically cultivated ingredients for Golden Chai. We are always looking for ways to make our ingredients more nutritional and their cultivation more supportive of the communities where they come from.
+          h4 Is Golden Chai vegan?
+          p Yes, Golden Chai is vegan!
+          h4 Does Golden Chai expire?
+          p Golden Chai is a dry food made and packaged in our food-safe commercial kitchen in Denver so it will last a long time. However, we recommend consuming Golden Chai within 4 months of ordering. 
+          h4 How much sugar is in Golden Chai?
+          p A single serving of Golden Chai contains three grams sugar. For reference a banana has 14. We also have chosen to use low-glycemic coconut sugar to make Golden Chai as healthy and as flavorful as possible.
+          h4 Does Golden Chai contain gluten?
+          p Nope.
+          h4 What common allergens are in Golden Chai?
+          p Coconut... that's about it.
+          h4 What do I do if I have a problem with my Golden Chai?
+          p Please contact #[a(href='mailto:info@goldenchai.com') info@goldenchai.com] right away and we will make things right. 
+          br
+        .faq_wrap
+          .page-header
+            h2#ingredient-list What is in Golden Chai?
+          h4 Three Potent Herbs
+          p Golden Chai contains a #[b potent triad] of ancient herbs that create a complimentary mixture of energy, longevity, and wellbeing.
+          .indent
+            h5 Turmeric
+            p Turmeric is what Golden Chai is all about. Turmeric is what gives Golden Chai its distinctive bright color and delicious satisfying taste as well as its dizzying list of physical benefits.
+            h5 Ginseng
+            p Golden Chai contains a medicinal dose of this ancient herb. Ginseng spices up the flavor of Golden Chai while decresing stress and increasing your energy and immune response.
+            h5 Ginger
+            p Ginger and turmeric go together like peas and carrots. Both sustain healthy digestive and metabolic health and add richness and complexity to the flavor of Golden Chai.
+          h4 A Sophisticated Nutritional Delivery System
+          p Golden Chai wraps its payload of powerful herbs in a nutritional delivery system that optimizes your body's ability to absorb nutrients.
+          .indent
+            h5 Coconut Milk Powder
+            p We put coconut milk powder in because it is high in fat. The fat-free craze is over: fat is good for you! It improves your skin, helps control appetite, makes food taste great, and helps your body absorb turmeric. 
+            h5 Black Pepper
+            p We like our chai to be a perfect balance of sweet and spicy. Black pepper enlivens the flavor of Golden Chai and helps your body absorb and enjoy the benefits of turmeric.
+          h4 Amazing, Natural Flavors
+          p Golden Chai lets you enjoy all the benefits of turmeric while enjoying an delicious, enviable, low-calorie and low-glycemic drink.
+          .indent
+            h5 Vanilla Bean Powder
+            p Ancient Mayans believed that adding vanilla in drinks would give aphrodisiac effects. We add it mainly for vanilla's sweet, warm, homey flavor.
+            h5 Coconut Sugar
+            p A sachet of Golden Chai contains only 3 grams of sugar. A banana has ~16g. We use coconut sugar because it has a lower glycemic index than other conventional sugars. 
+            h5 Cayenne Pepper
+            p We add a hint of Cayenne to Golden Chai for its color and flavor, but cayenne also makes you feel good and burn more calories.
+            h5 Pink Himalayan Sea Salt
+            p A dash of salt and Voilá!
+        br
+        .text-center
+          a.btn.btn-xl(href='/#order') Try Golden Chai
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+
+      .col-xs-12.col-md-2.col-md-offset-1.hidden-xs
+        #faqNav(data-spy="affix" data-offset-top="500" data-offset-bottom="-200")
+          ul.nav(role='')
+            li.active
+              a(href='#about') About
+            li
+              a(href='#delivery') Delivery
+            li
+              a(href='#ingredient-info') Ingredient Info
+            li
+              a(href='#ingredient-list') Ingredient List
+
+        //- .col-md-3.col-sm-6
+        //-   a(href='http://wellnessmama.com/223/turmeric-tea-recipe/', target='_blank')
+        //-     img.img-responsive.img-centered(src='images/logos/logo_wm.jpg', alt='')
+        //- .col-md-3.col-sm-6
+        //-   a(href='http://www.mnn.com/food/healthy-eating/stories/the-amazing-health-benefits-of-turmeric', target='_blank')
+        //-     img.img-responsive.img-centered(src='images/logos/logo_mnn.jpg', alt='')
+        //- .col-md-3.col-sm-6
+        //-   a(href='http://www.huffingtonpost.com/2014/10/18/turmeric-health-benefits-curcumin_n_5978482.html', target='_blank')
+        //-     img.img-responsive.img-centered(src='images/logos/logo_huff_po.png', alt='')
+        //- .col-md-3.col-sm-6
+        //-   a(href='http://www.freshbitesdaily.com/turmeric-milk/', target='_blank')
+        //-     img.img-responsive.img-centered(src='images/logos/logo_fbd.png', alt='')

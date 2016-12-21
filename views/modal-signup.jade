@@ -1,0 +1,38 @@
+//- SIGNUP MODAL
+a#signup(href='#signup-modal')
+#signup-modal
+  // THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal"
+  .close-signup-modal.text-center
+    i.icon.ion-ios-close-outline.animation-rotate
+  .modal-content
+    .container
+      .row
+        .col-lg-4.col-lg-offset-4.col-md-6.col-md-offset-3
+          .text-center
+            h2.section-heading Sign Up for Deals & News 
+            .lead.text-muted - Use Coupon GOLDENWELCOME for 10% Off - 
+            h3.section-subheading 
+            br
+          // Begin MailChimp Signup Form
+          #mc_embed_signup
+            form#mc-embedded-subscribe-form.validate(action='//goldenchai.us12.list-manage.com/subscribe/post?u=c5f1d3c8412077caf918384bf&id=4e2280fccd', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+              .form-group#mc_embed_signup_scroll
+                .row
+                  .col-xs-6
+                    .mc-field-group
+                      input.form-control#mce-FNAME(type='text', value='', name='FNAME', placeholder="First Name*")
+                  .col-xs-6
+                    .mc-field-group
+                      input.form-control#mce-LNAME(type='text', value='', name='LNAME', placeholder="Last Name*")  
+              .form-group
+                .mc-field-group
+                  input.form-control#mce-EMAIL.required.email(type='email', value='', name='EMAIL', placeholder="Email*")
+              #mce-responses.clear
+                #mce-error-response.response(style='display:none')
+                #mce-success-response.response(style='display:none')
+              // real people should not fill this in and expect good things - do not remove this or risk form bot signups
+              div(style='position: absolute; left: -5000px;', aria-hidden='true')
+                input(type='text', name='b_c5f1d3c8412077caf918384bf_4e2280fccd', tabindex='-1', value='')
+              .clear.text-center
+                input#mc-embedded-subscribe.btn.btn-xl(type='submit', value='Subscribe', name='subscribe')
+          // End mc_embed_signup

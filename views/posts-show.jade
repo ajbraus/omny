@@ -1,0 +1,22 @@
+extends layout
+
+block vars
+  - var titleText = post.title;
+  - var descriptionText = post.subtitle;
+  - var ogImageFile = post.backgroundUrl;
+
+block content
+  br
+  br
+  .container.blog
+    .row
+      .col-sm-8.col-sm-offset-2
+        h1.text-danger #{post.publishedAt? "" : "Draft"}
+        img.img-responsive(src="/images/backgrounds/#{post.backgroundUrl}", width="100%")
+        .page-header
+          h1 #{post.title}
+          .lead.text-muted #{post.subtitle}
+          | By #{post.authorName}
+        p!= post.body
+  
+  include ./modal-signup.jade

@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  br
+  br
+  br
+  .container
+    .row
+      .col-sm-12.col-md-8.col-md-offset-2
+        legend Edit Blog Post
+        form#updatePost(data-id="#{post._id}")
+          .form-group
+            label Title
+            input.form-control(name="title" value="#{post.title}")
+          .form-group
+            label Subtitle
+            input.form-control(name="subtitle" value="#{post.subtitle}")
+          .form-group
+            label Author Full Name
+            input.form-control(name="authorName" value="#{post.authorName}")
+          .form-group
+            label Author First Name Lower Case
+            input.form-control(name="authorPicName" value="#{post.authorPicName}")
+          .form-group
+            label Background Pic File Name (1400px min width) (send pic to Adam)
+            input.form-control(name="backgroundUrl" value="#{post.backgroundUrl}")
+          .form-group
+            label Post
+            textarea.form-control#postBody(name="body", rows="25")
+              | #{post.body}
+          button.btn.btn-primary Save

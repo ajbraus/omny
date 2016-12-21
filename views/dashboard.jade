@@ -1,0 +1,59 @@
+extends layout
+
+block content
+  br
+  br
+  br
+  .container
+    .row
+      .col-sm-12
+        h2.pull-left Blog Posts
+        .pull-right 
+          a.btn.btn-primary(href="/admin/posts/new") New
+        table.table
+          tr
+            th Title
+            th Subtitle
+            th Status
+            th Actions
+          each post in posts
+            tr
+              td 
+                a(href="/blog/#{post.slug}") #{post.title}
+              td
+                | #{post.subtitle}
+              td 
+                | #{post.publishedAt ? "Published" : "Draft"}
+              td
+                .btn-toolbar
+                  .btn-group
+                    form(action="/posts/#{post._id}/publish", method="POST")
+                      button.btn.btn-primary Publish
+                  .btn-group
+                    form(action="/posts/#{post._id}/unpublish", method="POST")
+                      button.btn.btn-warning Unpublish
+                  .btn-group
+                    div.btn.btn-danger.deletePost(data-id="#{post._id}") Delete
+                  .btn-group
+                    a.btn.btn-default(href="/admin/posts/#{post.slug}/edit") Edit
+    br
+    br
+    br
+    br       
+                
+    //- h2 #{orders.length} Orders
+    //- ul.list-group
+    //-   each order in orders
+    //-     li.list-group-item= order
+
+    //- hr
+    //- h2 #{contacts.length} Contacts
+    //- h5 All emails
+    //- each contact in contacts
+    //-   = contact.email + ","
+    //- br
+    //- br
+    //- ul.list-group
+    //-   each contact in contacts
+    //-     li.list-group-item
+    //-       = contact.first + " " + contact.last + " - " + contact.email

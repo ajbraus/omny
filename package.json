@@ -1,27 +1,24 @@
 {
-  "name": "omny",
+  "name": "goldenchai",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
   },
-  "devDependencies": {
-    "chai": "^3.4.1",
-    "dotenv": "^1.2.0",
-    "logger": "0.0.1",
-    "mocha": "^2.3.4",
-    "run-sequence": "^1.1.5"
-  },
   "dependencies": {
-    "bcrypt": "^1.0.1",
-    "bcryptjs": "^2.4.0",
     "body-parser": "~1.13.2",
+    "braintree": "^1.35.0",
     "cookie-parser": "~1.3.5",
+    "cors": "^2.7.1",
     "debug": "~2.2.0",
+    "dotenv": "^1.2.0",
     "express": "~4.13.1",
+    "express-mailer": "^0.3.0",
     "jade": "~1.11.0",
-    "mongoose": "^4.1.10",
+    "moment": "^2.13.0",
+    "mongoose": "^4.3.6",
     "morgan": "~1.6.1",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "sitemap": "^1.6.0"
   }
 }

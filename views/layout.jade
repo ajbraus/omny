@@ -1,6 +1,18 @@
 doctype html
 html(lang='en')
   head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+    block vars
+    
+    title #{titleText}
+    meta(name='description', content='#{descriptionText}')
+
+    meta(name='author', content='Omny Team')
+    meta(name="keywords" content="Teleportation, Teleport, Telepresence, Rent a Double, Robot Rental")
+
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
 
@@ -12,24 +24,59 @@ html(lang='en')
     meta(property='og:url', content='http://www.beomny.com')
     meta(property='og:image', content='https://upload.wikimedia.org/wikipedia/commons/e/ec/SCP_Foundation_(emblem).svg')
 
-    link(type='text/css', rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto:300,400,500')
+    // Bootstrap Core CSS
+    link(href='/vendor/bootstrap/dist/css/bootstrap.min.css', rel='stylesheet')
+    
+    //- ANIMATE.CSS
+    link(rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css")
+      
+    //- IONICONS
+    link(href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css", rel='stylesheet')
 
-    //- VENDOR STYLES 
-    link(rel='stylesheet', href='/vendor/bootstrap/dist/css/bootstrap.min.css')
+    //- Custom CSS
+    link(href='/stylesheets/style.css', rel='stylesheet')
 
-    //- MY STYLES 
-    link(rel='stylesheet', href='/stylesheets/styles.css')
+    //- Custom Fonts
+    link(href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css")
 
-    //- script(src='/vendor/jquery/dist/jquery.min.js', async='', defer='')
-    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
-    script(src='/vendor/bootstrap/dist/js/bootstrap.min.js', async='', defer='')
+    // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+      script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
 
-    //- script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDKk2JgZEwGLEsq11G-NLv8j_vMMT-suzw&libraries=places&callback=initAutocomplete', async='', defer='')
-    script(src='/javascripts/places.js')
-    script(src='/javascripts/referrals.js')
   body
     block content
 
     section.footer
       .container
-        .text-center Made with love in San Francisco
+        .row
+          .col-md-4
+            p 
+              a(href="/") Home
+            p 
+              a(href="/reservations/new") Make a Reservation
+            p 
+              a(href="/about-us") About Us
+            p 
+              a(href="/faq") FAQ
+            p 
+              a(href="/blog") Blog
+            p 
+              a(href="/contact-us") Contact
+          .col-md-4
+          .col-md-4
+            p 
+              .copyright Copyright © Omny LLC 2016
+
+    
+    //- SCRIPTS
+
+    script(type="text/javascript" src='/vendor/jquery/dist/jquery.min.js')
+    script(type="text/javascript" src='/vendor/bootstrap/dist/js/bootstrap.min.js')
+
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDKk2JgZEwGLEsq11G-NLv8j_vMMT-suzw&libraries=places&callback=initAutocomplete', async='', defer='')
+
+    //- MY SCRIPTS
+    script(type="text/javascript" src='/javascripts/adopters.js')
+    script(type="text/javascript" src='/javascripts/reservations.js')

@@ -1,0 +1,73 @@
+extends layout
+
+block vars
+  - var titleText = "About Us - Golden Chai";
+  - var descriptionText = 'The Golden Chai team is proud to produce and deliver delicious Golden Chai, also called turmeric milk or turmeric chai, to you.';
+
+block content
+  header.chai-milk
+    .container
+      br
+      br
+      br
+      br
+      br
+      .intro-text
+        h1.intro-heading About Us
+        .intro-lead-in Denver & San Francisco
+      br
+      br
+      br
+  
+  section.bg-light-gray#challenge
+    .container
+      .row
+        .col-lg-12.text-center
+          h3.text-muted Meet the Team
+      .row
+        .col-sm-3.col-xs-6
+          img.img-responsive(src="/images/team/glenn.jpg")
+          h5 Glenn McElfresh
+          .text-muted Makes pancakes with GC.
+        .col-sm-3.col-xs-6
+          img.img-responsive(src="/images/team/andrea.jpg")
+          h5 Andrea Slinde
+          .text-muted Adds cinnamon and clove to her GC.
+        .col-sm-3.col-xs-6
+          img.img-responsive(src="/images/team/adam.jpg")
+          h5 Adam Braus
+          .text-muted Adds cayenne and honey to his GC.
+        .col-sm-3.col-xs-6
+          img.img-responsive(src="/images/team/kat.jpg")
+          h5 Kat Koh
+          .text-muted Likes the original GC flavor best.
+
+  section
+    .container
+      h2.text-center How Golden Chai Began
+      br
+      .col-md-6.col-md-offset-3
+        h4 Scratching an Itch
+        p Like any indigenous San Franciscan, Kat has what some would consider extraordinarily high standards for healthy food. When an herbologist friend introduced her and her boyfriend Adam to the millennia-old #[b Indian home remedy "golden milk"] (#[i haldi ka doodh] or turmeric milk), she fell in love at first taste. This spice, she found out, made her feel great.
+        p After about a week of drinking it every day, she felt stable and robust in mood, energized throughout her 6am-6pm work day, was enjoyng her yoga more, and was sleeping better beyond belief. #[b For totally selfish reasons, Adam and she started developing a tastier, more convenient recipe.] That began obsessive researching, experimenting, and guzzling of mug after mug to find a recipe that struck just the right balance of delicious and nutrient-packed.
+        br
+        h4 The Search for a Masterpiece
+        p Adam sent the recipe to his Denver-based foodpreneur friend Glenn, who immediately bought the ingredients, made some, and judged it with his refined palette. Glenn thought it was good, but it could be better. Deciding to join in on the fun, he started drinking multiple mugfuls a day and couldn't believe all the different ways #[b it made his body feel great]: he was sleeping more deeply, his soreness from crossfit and hiking went away much faster, and his mind was clearer and sharper. Andrea came into the mix as a natural food entrepreneur who has experience at every link of the supply chain, including agricultural production, food manufacturing and distribution. She is excited to sustainably scale Golden Chai's production using ingredients with the highest organic integrity! Now the team was fully loaded. After a few more months of R&D, we landed on a masterpiece recipe that we need to share with the world.
+        br
+        h4 First The Recipe, then the World
+        p We started Golden Chai simply to scratch our own itch. We've researched it to the hilt and we're convinced that #[b turmeric is as close to medicine as food can be.] It delivers energy, is an anti-inflammatory powerhouse, and a sleep aid to boot. And honestly, we just couldn't stop drinking golden milk. We wanted a delicious, quick, and easy alternative to making it from scratch every time. Golden Chai is just that.
+        br
+        h4 You're in the Next Chapter
+        p We told our friends, our friends told theirs and it's been off to the races ever since. What started out as a way for a few health nerds in San Francisco and Denver to get their turmeric fix has now turned into something much bigger. Golden Chai is an easy way for you to fall in love with turmeric the way we have.
+        br
+        .text-center
+          a.btn.btn-xl(href='/#order') Try Golden Chai
+
+  .col-sm-6.no-padding
+    div(class="overlay" onClick="style.pointerEvents='none'")
+    iframe(width='100%', height='450', frameborder='0', style='border:0', src='https://www.google.com/maps/embed/v1/place?key=AIzaSyC02ZbFagIcqgtkMH24DvhPHsCC9zBb3yY\
+    &q=4897+oakland+street,Denver+CO&zoom=10', allowfullscreen='')
+  .col-sm-6.no-padding
+    div(class="overlay" onClick="style.pointerEvents='none'")
+    iframe(width='100%', height='450', frameborder='0', style='border:0', src='https://www.google.com/maps/embed/v1/place?key=AIzaSyC02ZbFagIcqgtkMH24DvhPHsCC9zBb3yY\
+    &q=1894+turk+street,San+Francisco+CA&zoom=12', allowfullscreen='')
