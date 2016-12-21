@@ -1,4 +1,10 @@
 - Make adopters work with "thank you" message once people sign up for alpha
 
-- New reservation
+- New booking... calendly.com
+  DONE - Location bounds
+  - Date dropdown 
+    - Set tomorrow's date as default
+    - When submitting form - parse into js date
+  - Starting time dropdown
+  - 
   - Map

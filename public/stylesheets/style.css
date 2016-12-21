@@ -44,3 +44,19 @@ section {
   background: black;
   color: white;
 }
+
+.less-padding {
+   
+}
+
+
+.col-input-left {
+  padding-right: 0px;
+}
+.col-input-right {
+  padding-left: 0px;
+}
+.col-input-center {
+  padding-right: 5px;
+  padding-left: 5px;
+}

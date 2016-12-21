@@ -1,7 +1,7 @@
 var mongoose = require('mongoose')
   , Schema = mongoose.Schema;
 
-var ReservationSchema = new Schema({
+var BookingSchema = new Schema({
     createdAt                     : { type: Date }
   , updatedAt                     : { type: Date }
 
@@ -15,7 +15,8 @@ var ReservationSchema = new Schema({
   , postal_code                   : { type: String }
 
   , startsAt                      : Date
-  , seconds                       : Number
+  , endsAt                        : Date
+  , hours                         : Number
 
   , priceInCents                  : Number
   , feeInCents                    : Number
@@ -32,7 +33,7 @@ var ReservationSchema = new Schema({
 })
 
 // SET createdAt and updatedAt
-ReservationSchema.pre('save', function(next) {
+BookingSchema.pre('save', function(next) {
   now = new Date();
   this.updatedAt = now;
   if ( !this.createdAt ) {
@@ -41,6 +42,6 @@ ReservationSchema.pre('save', function(next) {
   next();
 });
 
-var Reservation = mongoose.model('Reservation', ReservationSchema);
+var Booking = mongoose.model('Booking', BookingSchema);
 
-module.exports = Reservation;
+module.exports = Booking;

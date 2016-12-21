@@ -72,7 +72,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 require('./routes/pages')(app);
 require('./routes/contacts')(app);
 require('./routes/adopters')(app);
-require('./routes/reservations')(app);
+require('./routes/bookings')(app);
 require('./routes/posts')(app);
 
 // // catch 404 and forward to error handler

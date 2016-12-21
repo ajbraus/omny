@@ -73,12 +73,25 @@ function fillInAddress() {
 
 $(document).ready(function() {
 
-  $('#reservationForm').submit(function(e) {
+  // SET TOMORROW'S DATE AS DEFAULT
+  var monthNames = ["January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
+
+  var tomorrow = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
+  console.log(tomorrow.getYear());
+  $('#starts-on-month').val(monthNames[tomorrow.getMonth()])
+  $('#starts-on-day').val(tomorrow.getDate())
+  $('#starts-on-year').val(tomorrow.getYear() + 1900)
+
+
+  // SUBMIT FORM
+  $('#booking-form').submit(function(e) {
     e.preventDefault();
     
     var formData = $(this).serialize();
 
-    $.post('/reservations', formData)
+    $.post('/bookings', formData)
         .done(function(data){ 
           console.log(data);
         })
@@ -86,5 +99,7 @@ $(document).ready(function() {
           console.log(error);
         });
   });
+
+
 
 });
