@@ -18,7 +18,7 @@ var sm = require('sitemap');
 var app = express();
 
 var sitemap = sm.createSitemap ({
-  hostname: 'http://www.goldenchai.co',
+  hostname: 'http://www.beomny.com',
   cacheTime: 600000,        // 600 sec - cache purge period 
   urls: [
     { url: '/',  changefreq: 'monthly', priority: 1 },
@@ -43,7 +43,7 @@ app.get('/sitemap.xml', function(req, res) {
 
 // app.use(favicon(__dirname + '/public/images/favicons/favicon.ico'));
 
-mongoose.connect(process.env.MONGOLAB_URI);
+mongoose.connect(process.env.MONGODB_URI);
 
 mailer.extend(app, {
   from: 'Golden Chai', 
@@ -52,7 +52,7 @@ mailer.extend(app, {
   port: 465, // port for secure SMTP 
   transportMethod: 'SMTP', // default is SMTP. Accepts anything that nodemailer accepts 
   auth: {
-    user: 'info@goldenchai.co',
+    user: 'info@beomny.com',
     pass: process.env.EMAIL_SECRET
   }
 });
