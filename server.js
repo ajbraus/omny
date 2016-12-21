@@ -46,13 +46,13 @@ app.get('/sitemap.xml', function(req, res) {
 mongoose.connect(process.env.MONGODB_URI);
 
 mailer.extend(app, {
-  from: 'Golden Chai', 
+  from: 'Omny Teleportation Services', 
   host: 'smtp.gmail.com', // hostname 
   secureConnection: true, // use SSL 
   port: 465, // port for secure SMTP 
   transportMethod: 'SMTP', // default is SMTP. Accepts anything that nodemailer accepts 
   auth: {
-    user: 'info@beomny.com',
+    user: 'beomnypresent@gmail.com',
     pass: process.env.EMAIL_SECRET
   }
 });

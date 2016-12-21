@@ -3,7 +3,9 @@ var Booking = require('../models/booking.js');
 module.exports = function(app) {
 
   app.get('/bookings', function(req, res, next) {
-    res.render('bookings-index')
+    Booking.find({ createdAt: { $gte: new Date() } }, function(err, bookings) {
+      res.render('bookings-index', { bookings: bookings })
+    })
   });
 
   app.get('/bookings/new', function(req, res, next) {

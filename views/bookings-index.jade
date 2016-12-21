@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  section
+    .container
+      .row
+        .col-sm-8.col-sm-offset-2
+          .list-group
+            - each booking in bookings
+              .list-group-item
+                p
+                  = booking.place
+                p
+                  = booking.address
+                p
+                  = booking.startsAt
