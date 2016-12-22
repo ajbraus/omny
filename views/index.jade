@@ -6,13 +6,13 @@ block vars
   - var ogImageFile = "host.jpg"
 
 block content
-  section.jumbotron.host-pic.text-center
+  section.jumbotron.teleport-pic.text-center
     br
     br
     h1 
       | Teleportation Services For Hire
     .lead
-      | Teleport to and around the San Francisco Bay Area for as little as $100
+      | Teleport to and around the San Francisco Bay Area for as little as $65
     br
     br
     br
@@ -24,13 +24,17 @@ block content
     br
     .row
       .col-xs-8.col-xs-offset-2
-        form#adopter-form.form-inline
+        form#contact-form.form-inline
+          .form-group
+            input.form-control.form-control-lg(name="name" placeholder='Jane Doe')
           .form-group
             input.form-control.form-control-lg(name="email" autofocus="true" placeholder='jane.doe@gmail.com')
+          .form-group
+            input.form-control.form-control-lg(name="phone" placeholder='555-555-5555')
           button.btn.btn-lg.btn-primary(type='submit') Join
 
     br
-    .lead Use your email to request a booking or a free 10 min trial
+    .lead Use your name, email, and phone to request a booking or a free 10 min trial
   
     //- br
     //- | Sign up and share your code to try teleportation sooner.
@@ -39,7 +43,52 @@ block content
 
   section
     .container
-      h2.text-center How it Works
+      .row
+        h2.text-center Imagine Your Next 2 Day Conference
+        br
+        .col-sm-5.col-sm-offset-1
+          h3.text-center 
+            i.icon.ion-plane.large 
+            | Fly
+          br
+          p.lead
+            | 48 hours away from home
+            br
+            | $400 - Flight
+            br
+            | $400 - Hotel
+            br 
+            | $100 - Bus/Car/Taxi 
+            br
+            | $200 - Food/Drink
+            hr
+            p.lead 
+              b $1100 - Total 
+        .col-sm-5
+          h3.text-center 
+            i.icon.ion-radio-waves.large 
+            | Teleport
+          br
+          p.lead
+            | Work from anywhere
+            br
+            | 2 x $20 - Delivery Fee
+            br
+            | 2 x $300 - Full Day Rental Fee
+            br
+            br
+            br
+            hr
+            p.lead 
+              b $340 - Total 
+  
+  .container
+    .col-xs-12
+      img.img-responsive(src="/images/host.jpg")
+  
+  section
+    .container
+      h2.text-center How Omny Works
       br
       .row
         .col-sm-4

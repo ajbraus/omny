@@ -4,12 +4,9 @@ var mongoose = require('mongoose'),
 var ContactSchema = new Schema({
     createdAt     : { type: Date }
   , updatedAt     : { type: Date }
-  , first         : String
-  , last          : String
+  , name          : String
   , email         : String
   , phone         : String
-  , subject       : String
-  , body          : String
 })
 
 ContactSchema.pre('save', function(next){

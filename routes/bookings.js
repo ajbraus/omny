@@ -13,10 +13,12 @@ module.exports = function(app) {
   });
 
   app.post('/bookings', function(req, res, next) {
-    Booking.create(req.body, function (err, booking) {
-      if (err) { return res.status(400).send(err) }
-      
-      console.log(booking)
+    console.log(req.body);
+
+
+
+    Booking.create(req.body, function (err) {
+      if (err) { return res.status(401).send(err) }
 
       res.send(booking)
     })

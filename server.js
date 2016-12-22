@@ -71,7 +71,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 require('./routes/pages')(app);
 require('./routes/contacts')(app);
-require('./routes/adopters')(app);
 require('./routes/bookings')(app);
 require('./routes/posts')(app);
 

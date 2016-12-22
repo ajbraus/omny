@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  section
+    .container
+      .row
+        .col-sm-8.col-sm-offset-2
+          .list-group
+            - each contact in contacts
+              .list-group-item
+                p
+                  = contact.email

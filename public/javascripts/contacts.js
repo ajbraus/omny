@@ -1,14 +1,14 @@
 $(document).ready(function() {
 
-  $('#adopter-form').submit(function(e) {
+  $('#contact-form').submit(function(e) {
     e.preventDefault();
     e.stopImmediatePropagation();
     
-    var adopter = $(this).serialize();
+    var contact = $(this).serialize();
 
-    $.post('/adopters', adopter, function(response) {
-      $('#adopter-form')[0].reset();
-      alert("Message sent! Thank you for adoptering us.")
+    $.post('/contacts', contact, function(response) {
+      $('#contact-form')[0].reset();
+      alert("Message sent! Thank you for contacting us.")
     })
     .fail(function(response) {
       alert(response.data);

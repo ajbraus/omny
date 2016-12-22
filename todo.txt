@@ -1,10 +1,17 @@
-- Make adopters work with "thank you" message once people sign up for alpha
+- Make contacts work with "thank you" message once people sign up for alpha " you will be contacted shortly"  
 
 - New booking... calendly.com
   DONE - Location bounds
+  - change the city => changes the bias of google places
   - Date dropdown 
-    - Set tomorrow's date as default
+    DONE - Set tomorrow's date as default  
     - When submitting form - parse into js date
   - Starting time dropdown
-  - 
+    - When submitting form - parse into total hours
+    - fix the padding between these elements
+  - coupon code
+  - teleporter's name, email, mobile number, permission to text => create a user object w/o password
+  - Meeting a particular person? "Attention: Adam Braus 608-770-0230"
+
+
   - Map

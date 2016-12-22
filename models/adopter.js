@@ -6,16 +6,16 @@ function toLower (v) {
   return v.toLowerCase();
 }
 
-var AdopterSchema = new Schema({
+var ContactSchema = new Schema({
     createdAt          : Date
   , updatedAt          : Date
   , email              : { type: String, required: true, unique: true, trim: true, set: toLower }
   , referralToken      : String
 
-  , referrals          : [{ type: Schema.Types.ObjectId, ref: 'Adopter' }]
+  , referrals          : [{ type: Schema.Types.ObjectId, ref: 'Contact' }]
 })
 
-AdopterSchema.pre('save', function(next){
+ContactSchema.pre('save', function(next){
   // SET createdAt AND updatedAt
   now = new Date();
   this.updatedAt = now;
@@ -25,6 +25,6 @@ AdopterSchema.pre('save', function(next){
   next();
 });
 
-var Adopter = mongoose.model('Adopter', AdopterSchema);
+var Contact = mongoose.model('Contact', ContactSchema);
 
-module.exports = Adopter;
+module.exports = Contact;

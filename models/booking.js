@@ -7,12 +7,9 @@ var BookingSchema = new Schema({
 
   , place                         : { type: String }
   , address                       : { type: String }
-  , street_number                 : { type: String }
-  , route                         : { type: String }
-  , locality                      : { type: String }
-  , administrative_area_level_1   : { type: String }
-  , country                       : { type: String }
-  , postal_code                   : { type: String }
+
+  , lat                           : { type: Number }
+  , lng                           : { type: Number }
 
   , startsAt                      : Date
   , endsAt                        : Date
@@ -21,6 +18,8 @@ var BookingSchema = new Schema({
   , priceInCents                  : Number
   , feeInCents                    : Number
   , totalInCents                  : Number
+
+  , instructions                  : String
 
   // , taxPerCent                    : Number
   // , taxInCents                    : Number

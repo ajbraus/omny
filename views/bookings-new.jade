@@ -1,6 +1,7 @@
 extends layout
 
 block content
+  #map
   section
     .container
       .row
@@ -10,15 +11,21 @@ block content
             .form-group
               label(for='city') City
               select.form-control#city(name="city")
-                option(value="San Francisco" selected) San Francisco
+                option(value="San Francisco" selected) San Francisco Bay Area
+                option(value="Los Angeles") Los Angeles
             .form-group
               label(for='location') Place Name or Address
               input#autocomplete.form-control(placeholder='Enter the place name or address', type='text')
+              input#place(name="place" type="hidden")
+              input#address(name="address" type="hidden")
+              input#lat(name="lat" type="hidden")
+              input#lng(name="lng" type="hidden")
+
             .form-group
-              label(for='starts-on') What Day?
+              label(for='startsOn') What Day?
               .row
                 .col-xs-5.col-input-left
-                  select#starts-on-month.form-control(name='starts-on-month')
+                  select#starts-on-month.form-control(name='startsOnMonth')
                     option  - Month - 
                     option(value='January') January
                     option(value='Febuary') Febuary
@@ -33,7 +40,7 @@ block content
                     option(value='November') November
                     option(value='December') December
                 .col-xs-3.col-input-center
-                  select#starts-on-day.form-control(name='starts-on-day')
+                  select#starts-on-day.form-control(name='startsOnDay')
                     option  - Day - 
                     option(value='1') 1
                     option(value='2') 2
@@ -67,7 +74,7 @@ block content
                     option(value='30') 30
                     option(value='31') 31
                 .col-xs-4.col-input-right
-                  select#starts-on-year.form-control(name='starts-on-year')
+                  select#starts-on-year.form-control(name='startsOnYear')
                     option  - Year - 
                     option(value='2016') 2016
                     option(value='2017') 2017
@@ -75,10 +82,10 @@ block content
 
             .row              
               .col-xs-12.text-muted Please use the time zone of your destination
-              .col-xs-6
+              .col-xs-6.input-left
                 .form-group
                   label(for='startsAt') Start Time 
-                  select#starts-at.form-control
+                  select#starts-at.form-control(name="startsAt")
                     option 8:00am
                     option 8:30am
                     option 9:00am
@@ -88,7 +95,7 @@ block content
                     option 11:00am
                     option 11:30am
                     option 12:00pm
-                    option 12:00pm
+                    option 12:30pm
                     option 1:00pm
                     option 1:30pm
                     option 2:00pm
@@ -112,6 +119,7 @@ block content
                     option 11:00pm
                     option 11:30pm
                     option 12:00am
+                    option 12:30am
                     option 1:00am
                     option 1:30am
                     option 2:00am
@@ -126,11 +134,29 @@ block content
                     option 6:30am
                     option 7:00am
                     option 7:30am
-              .col-xs-6
+              .col-xs-6.input-right
                 .form-group
                   label(for='endsAt') Finishing Time
-                  select#ends-at.form-control
-                    option 5:00pm
+                  select#ends-at.form-control(name="endsAt")
+                    option 8:00am
+                    option 8:30am
+                    option 9:00am
+                    option 9:30am
+                    option 10:00am
+                    option 10:30am
+                    option 11:00am
+                    option 11:30am
+                    option 12:00pm
+                    option 12:30pm
+                    option 1:00pm
+                    option 1:30pm
+                    option 2:00pm
+                    option 2:30pm
+                    option 3:00pm
+                    option 3:30pm
+                    option 4:00pm
+                    option 4:30pm
+                    option(selected) 5:00pm
                     option 5:30pm
                     option 6:00pm
                     option 6:30pm
@@ -145,6 +171,7 @@ block content
                     option 11:00pm
                     option 11:30pm
                     option 12:00am
+                    option 12:30am
                     option 1:00am
                     option 1:30am
                     option 2:00am
@@ -159,27 +186,10 @@ block content
                     option 6:30am
                     option 7:00am
                     option 7:30am
-                    option 8:00am
-                    option 8:30am
-                    option 9:00am
-                    option 9:30am
-                    option 10:00am
-                    option 10:30am
-                    option 11:00am
-                    option 11:30am
-                    option 12:00pm
-                    option 12:00pm
-                    option 1:00pm
-                    option 1:30pm
-                    option 2:00pm
-                    option 2:30pm
-                    option 3:00pm
-                    option 3:30pm
-                    option 4:00pm
-                    option 4:30pm
-
+            
+            .text-muted 
             .form-group
-              label(for='location') Instructions
-              textarea.form-control(placeholder='Any special instructions?', type='text')
+              label(for='instructions') Instructions or Special Requests
+              textarea.form-control(name="instructions" placeholder='Are you meeting someone or attending an event?', type='text')
 
             button.btn.btn-primary.btn-block Request Teleportation
