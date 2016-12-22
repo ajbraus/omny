@@ -12,7 +12,7 @@ block content
               label(for='city') City
               select.form-control#city(name="city")
                 option(value="San Francisco" selected) San Francisco Bay Area
-                option(value="Los Angeles") Los Angeles
+                //- option(value="Los Angeles") Los Angeles
             .form-group
               label(for='location') Place Name or Address
               input#autocomplete.form-control(placeholder='Enter the place name or address', type='text')
@@ -189,7 +189,7 @@ block content
             
             .text-muted 
             .form-group
-              label(for='instructions') Instructions or Special Requests
+              label(for='instructions') Details, Instructions, or Special Requests
               textarea.form-control(name="instructions" placeholder='Are you meeting someone or attending an event?', type='text')
 
             button.btn.btn-primary.btn-block Request Teleportation
