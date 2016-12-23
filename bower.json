@@ -13,7 +13,8 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "public/vendor"
   ],
   "dependencies": {
     "bootstrap": "^3.3.7",
