@@ -3,17 +3,28 @@
 - New booking... calendly.com
   DONE - Location bounds
   DONE - change the city => changes the bias of google places
-  - icons on map in cities we are live in or going live in soon.
   DONE - Date dropdown 
     DONE - Set tomorrow's date as default  
-    - When submitting form - parse into js date
+    DONE - When submitting form - parse into js date
   - Starting time dropdown
-    - When submitting form - parse into total hours
+    DONE - When submitting form - parse into total hours
     DONE - fix the padding between these elements
-    - Calculate and save total fee
-  - coupon code
-  - teleporter's name, email, mobile number, permission to text => create a user object w/o password
-  - Meeting a particular person? "Attention: Adam Braus 608-770-0230"
+    DONE - Calculate and save total fee
+  
+  DONE - teleporter's name, mobile number
+  DONE - instructions
 
 
-  - Map
+
+
+-----------
+
+- Form
+  - referral code
+
+- Map
+  - icons on map in cities we are live in or going live in soon.
+
+-----------
+
+- Authentication

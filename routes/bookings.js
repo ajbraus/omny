@@ -3,9 +3,11 @@ var Booking = require('../models/booking.js');
 module.exports = function(app) {
 
   app.get('/bookings', function(req, res, next) {
-    Booking.find({ createdAt: { $gte: new Date() } }, function(err, bookings) {
+    Booking.find(function (err, bookings) {
       res.render('bookings-index', { bookings: bookings })
     })
+
+    //{ createdAt: { $gte: new Date() } }
   });
 
   app.get('/bookings/new', function(req, res, next) {
@@ -13,15 +15,16 @@ module.exports = function(app) {
   });
 
   app.post('/bookings', function(req, res, next) {
-    console.log(req.body);
+    var booking = new Booking(req.body);
 
+    booking.save(function (err) {
+      if (err) { 
+        console.log(err);
+        return res.status(401).send(err);
+      }
 
-
-    Booking.create(req.body, function (err) {
-      if (err) { return res.status(401).send(err) }
-
-      res.send(booking)
-    })
+      res.send(booking);
+    });
   });
 
 } 

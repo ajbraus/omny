@@ -5,9 +5,11 @@ var BookingSchema = new Schema({
     createdAt                     : { type: Date }
   , updatedAt                     : { type: Date }
 
+  , name                          : { type: String }
+  , phone                         : { type: String }
+
   , place                         : { type: String }
   , address                       : { type: String }
-
   , lat                           : { type: Number }
   , lng                           : { type: Number }
 
@@ -15,11 +17,12 @@ var BookingSchema = new Schema({
   , endsAt                        : Date
   , hours                         : Number
 
-  , priceInCents                  : Number
-  , feeInCents                    : Number
-  , totalInCents                  : Number
+  , rentalFeeInCents              : Number
+  , deliveryFeeInCents            : Number
+  , totalFeeInCents               : Number
 
   , instructions                  : String
+  // , referralCode                  : String
 
   // , taxPerCent                    : Number
   // , taxInCents                    : Number

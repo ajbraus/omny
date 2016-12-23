@@ -83,10 +83,19 @@ function fillInAddress(geocoder, map) {
 }
 
 function calcTotalFee() {
-  var deliveryFee = parseInt($('#deliveryFee').text())
-  var rentalFee = parseInt($('#rentalFee').text())
-  var totalFee =  deliveryFee + rentalFee
-  $('#totalFee').text(totalFee)
+  var startsAt = $('#starts-at').val()
+  var endsAt = $('#ends-at').val()
+
+  var startsAtDate = Date.parse("Wed, 09 Aug 1995 " + startsAt)
+  var endsAtDate = Date.parse("Wed, 09 Aug 1995 " + endsAt)
+
+  var totalTimeInMilliseconds = endsAtDate - startsAtDate;
+  var totalTimeInHours = totalTimeInMilliseconds/1000/60/60;
+
+  var totalRentalFee = 40 * totalTimeInHours;
+
+  $('#rentalFee').text(totalRentalFee);
+  $('#totalFee').text(totalRentalFee + 25)
 }
 
 $(document).ready(function() {
@@ -103,33 +112,43 @@ $(document).ready(function() {
   $('#starts-on-year').val(tomorrow.getYear() + 1900)
 
   calcTotalFee()
-  $('#starts-at #ends-at').change(function() {
+  $('#starts-at, #ends-at').change(function() {
     calcTotalFee();
   })
 
   // SUBMIT FORM
-  $('#booking-form').submit(function(e) {
+  $('#request-teleporation').click(function(e) {
     e.preventDefault();
+    var month = monthNames.indexOf($('#starts-on-month').val());
+    var day = $('#starts-on-day').val();
+    var year = $('#starts-on-year').val();
+    var startsAt = $('#starts-at').val();
+    var endsAt = $('#ends-at').val();
 
-    // TODO PARSE STARTING AT ENDING AT DATES
-    
-    var month = monthNames.indexOf($('#starts-on-month').val())
-    var day = $('#starts-on-day').val()
-    var year = $('#starts-on-year').val()
-    var startsAt = $('#starts-at').val()// + ":00" 
-    var endsAt = $('#ends-at').val()// + ":00"
+    var startsAtDateTime = Date.parse(month + " " + day + " " + year + " " + startsAt);
+    var endsAtDateTime = Date.parse(month + " " + day + " " + year + " " + endsAt);
+    var hours = (endsAtDateTime - startsAtDateTime)/1000/60/60;
 
-    console.log(year + "-" + day + "-" + month + " " + startsAt)
     var booking = {
+      name: $('#name').val(),
+      phone: $('#phone').val(),
+
       place: $('#place').val(),
       address: $('#address').val(),
       lat: $('#lat').val(),
       lng: $('#lng').val(),
-      startsAt: Date.parse(year + month + day + startsAt),
-      endsAt: Date.parse(year, month, day, endsAt),
-      instructions: $('#instructions').val(),
-    }
 
+      startsAt: startsAtDateTime,
+      endsAt: endsAtDateTime,
+      hours: hours,
+      
+      instructions: $('#instructions').val(),
+
+      rentalFeeInCents: parseInt($('#rentalFee').text())*100,
+      deliveryFeeInCents: parseInt($('#deliveryFee').text())*100,
+      totalFeeInCents: parseInt($('#totalFee').text())*100
+    }
+    console.log(booking)
     $.post('/bookings', booking)
         .done(function(data){ 
           // CONFIRMATION SENT BY EMAIL

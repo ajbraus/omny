@@ -16,9 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "instafeed.js": "^1.4.1",
-    "bootstrap3-wysihtml5-bower": "^0.3.3",
-    "js-cookie": "^2.1.1",
+    "bootstrap": "^3.3.7",
     "moment": "^2.17.1"
   }
 }
