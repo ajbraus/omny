@@ -1,7 +1,7 @@
 extends layout
 
 block vars
-  - var titleText = "Omny - Teleport for $100";
+  - var titleText = "Omny - Teleport for $75";
   - var descriptionText = "Be present anywhere in the San Francisco Bay Area. Instantly.";
   - var ogImageFile = "host.jpg"
 
@@ -12,7 +12,7 @@ block content
     h1 
       | Teleportation Services For Hire
     .lead
-      | Teleport to and around the San Francisco Bay Area for as little as $65
+      | Teleport to and around the San Francisco Bay Area for as little as $75
     br
     br
     br
@@ -26,9 +26,9 @@ block content
       .col-xs-8.col-xs-offset-2
         form#contact-form.form-inline
           .form-group
-            input.form-control.form-control-lg(name="name" placeholder='Jane Doe')
-          .form-group
             input.form-control.form-control-lg(name="email" autofocus="true" placeholder='jane.doe@gmail.com')
+          .form-group
+            input.form-control.form-control-lg(name="name" placeholder='Jane Doe')
           .form-group
             input.form-control.form-control-lg(name="phone" placeholder='555-555-5555')
           button.btn.btn-lg.btn-primary(type='submit') Join
@@ -44,7 +44,9 @@ block content
   section
     .container
       .row
-        h2.text-center Consider Teleportating to Your Next 2 Day Conference
+        h2.text-center Compare Teleportating to Flying
+          br
+          | to a 2 Day Conference
         br
         .col-sm-4.col-sm-offset-2
           h3.text-center 
@@ -52,35 +54,36 @@ block content
             | Fly
           br
           p.lead
-            | 56 hours away from home
+            | $450 - Flight
             br
-            | $400 - Flight
-            br
-            | $400 - Hotel
+            | $350 - Hotel
             br 
-            | $100 - Bus/Car/Taxi 
+            | $150 - Bus/Car/Taxi 
             br
-            | $200 - Food/Drink
+            | $150 - Food/Drink
             hr.dark
             p.lead 
               b $1100 - Total 
+              br
+              | 48 Hours away from your life
         .col-sm-4
           h3.text-center 
             i.icon.ion-radio-waves.large 
             | Teleport
           br
           p.lead
-            | Work 8 hours from anywhere
+            | 2 x $25 - Delivery Fee
             br
-            | 2 x $20 - Delivery Fee
-            br
-            | 2 x $300 - Full Day Rental Fee
+            | 2 x $320 - Full Day Rental Fee
             br
             br
             br
             hr.dark
             p.lead 
-              b $340 - Total 
+              b $670 - Total
+              br
+              | 16 Hours away from your life
+ 
   hr
   section
     .container
@@ -105,10 +108,41 @@ block content
             | Teleport
           br
           p.lead At the time of your reservation, use your confirmation code to log into your host and begin. When you are done, leave review of your experience. If you aren't 100% satisfied, we'll give you your money back.
-  
-  .container
-    .col-xs-12
-      img.img-responsive(src="/images/host.jpg")
-  br
-  br
-  
+  section
+    .container
+      .col-sm-10.col-sm-offset-1
+        .embed-responsive.embed-responsive-16by9
+          iframe.embed-responsive-item(width="560" height="315" src="https://www.youtube.com/embed/ho1RDiZ5Xew?start=14" frameborder="0" allowfullscreen)
+        //- img.img-responsive(src="/images/host.jpg")
+  section
+    .container
+      h2.text-center Rates
+      br
+      .row
+        .col-sm-6.col-sm-offset-3
+          .list-group
+            .list-group-item.clearfix.lead
+              b.pull-left
+                i.icon.ion-android-car 
+                | Delivery Fee
+              .pull-right $25
+      .row
+        .col-sm-6.col-sm-offset-3
+          .list-group
+            .list-group-item.clearfix.lead
+              b.pull-left
+                i.icon.ion-clock 
+                | Hourly
+              .pull-right $50/hour
+            .list-group-item.lead
+              b
+                i.icon.ion-pie-graph
+                | Half Day (4 hours)
+              .pull-right $180 ($45/hour)
+            .list-group-item.lead
+              b
+                i.icon.ion-calendar 
+                | Full Day (8 hours)
+              .pull-right $320 ($40/hour)
+
+

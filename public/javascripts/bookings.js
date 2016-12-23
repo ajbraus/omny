@@ -1,12 +1,4 @@
 var placeSearch, autocomplete;
-var componentForm = {
-  street_number: 'short_name',
-  route: 'long_name',
-  locality: 'long_name',
-  administrative_area_level_1: 'short_name',
-  country: 'long_name',
-  postal_code: 'short_name'
-};
 
 function initAutocomplete() {
   autocomplete = new google.maps.places.Autocomplete(
@@ -15,7 +7,9 @@ function initAutocomplete() {
   );
 
   var map = new google.maps.Map(document.getElementById('map'), {
-    scroll: false
+    scrollwheel: false,
+    mapTypeControl: false,
+    streetViewControl: false
   });
   
   var geocoder = new google.maps.Geocoder();
@@ -88,6 +82,13 @@ function fillInAddress(geocoder, map) {
 
 }
 
+function calcTotalFee() {
+  var deliveryFee = parseInt($('#deliveryFee').text())
+  var rentalFee = parseInt($('#rentalFee').text())
+  var totalFee =  deliveryFee + rentalFee
+  $('#totalFee').text(totalFee)
+}
+
 $(document).ready(function() {
 
   // SET TOMORROW'S DATE AS DEFAULT
@@ -101,6 +102,10 @@ $(document).ready(function() {
   $('#starts-on-day').val(tomorrow.getDate())
   $('#starts-on-year').val(tomorrow.getYear() + 1900)
 
+  calcTotalFee()
+  $('#starts-at #ends-at').change(function() {
+    calcTotalFee();
+  })
 
   // SUBMIT FORM
   $('#booking-form').submit(function(e) {
