@@ -51,14 +51,14 @@ section {
 
 
 .col-input-left {
-  padding-right: 0px;
+  padding-right: 3px;
 }
 .col-input-right {
-  padding-left: 0px;
+  padding-left: 3px;
 }
 .col-input-center {
-  padding-right: 5px;
-  padding-left: 5px;
+  padding-right: 3px;
+  padding-left: 3px;
 }
 
 .input-left {
