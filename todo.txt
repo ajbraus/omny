@@ -1,5 +1,3 @@
-- Make contacts work with "thank you" message once people sign up for alpha " you will be contacted shortly"  
-
 - New booking... calendly.com
   DONE - Location bounds
   DONE - change the city => changes the bias of google places
@@ -13,8 +11,20 @@
   
   DONE - teleporter's name, mobile number
   DONE - instructions
+DONE - Send email when new booking or contact
+
+- index
+  DONE - give us your email for a free 10 minute teleportation
+  DONE - or request a booking
+
+- bookings-new 
+  - two columns
+  - Validations
+
+- bookings-index
 
 
+- Make contacts work with "thank you" message once people sign up for alpha " you will be contacted shortly"  
 
 
 -----------

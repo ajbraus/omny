@@ -1,0 +1,17 @@
+extends email-layout
+
+block body
+  p
+    strong Hi there Omny Teleport Technician
+    p #{booking.name} just requested a booking
+    p #{booking.email} - #{booking.phone}
+    p #{booking.place}
+    p #{booking.address}
+    p='Date: ' + moment(obj.startsAt).format("YYYY/MM/DD") + ')'
+    p
+      span='Date: ' + moment(obj.startsAt).format("YYYY/MM/DD") + ')' 
+      | - 
+      p='Date: ' + moment(obj.endsAt).format("YYYY/MM/DD") + ')'
+    p #{booking.endsAt}
+    p #{booking.hours}
+  p Please get back to them within 24 hours. Thanks!

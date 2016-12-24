@@ -20,14 +20,14 @@ module.exports = function(app) {
 
     Contact.create(req.body, function (err, contact) {
       if (err) { return res.status(400).send(err) }
-      console.log(contact)
-      // app.mailer.send('emails/new-contact', {
-      //   to: "info@goldenchai.co",
-      //   subject: 'GC Contact: ' + contact.first + " " + contact.last + " - " + contact.subject,
-      //   contact: contact
-      // }, function (err) {
-      //   if (err) { console.log(err); return }
-      // });
+
+      app.mailer.send('emails/new-contact', {
+        to: "ajbraus@gmail.com",
+        subject: 'New contact' + contact.name + " - " + contact.email,
+        contact: contact
+      }, function (err) {
+        if (err) { console.log(err); return }
+      });
 
       res.send(contact)
     });

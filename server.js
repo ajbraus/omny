@@ -17,6 +17,8 @@ var sm = require('sitemap');
 
 var app = express();
 
+app.locals.moment = require('moment');
+
 var sitemap = sm.createSitemap ({
   hostname: 'http://www.beomny.com',
   cacheTime: 600000,        // 600 sec - cache purge period 

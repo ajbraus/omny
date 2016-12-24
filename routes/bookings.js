@@ -23,6 +23,14 @@ module.exports = function(app) {
         return res.status(401).send(err);
       }
 
+      app.mailer.send('emails/new-booking', {
+        to: "ajbraus@gmail.com",
+        subject: 'New booking' + booking.name + " - " + booking.phone,
+        booking: booking
+      }, function (err) {
+        if (err) { console.log(err); return }
+      });
+
       res.send(booking);
     });
   });

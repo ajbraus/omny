@@ -17,6 +17,7 @@
     "public/vendor"
   ],
   "dependencies": {
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "moment": "^2.17.1"
   }
 }
