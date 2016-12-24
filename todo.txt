@@ -21,12 +21,10 @@ DONE - Send email when new booking or contact
   DONE - two columns
   DONE - Validations
 
-- bookings-index
-
-- Make contacts work with "thank you" message once people sign up for alpha " you will be contacted shortly"  
-
 
 -----------
+
+- bookings-index
 
 - Form
   - referral code
@@ -37,3 +35,5 @@ DONE - Send email when new booking or contact
 -----------
 
 - Authentication
+
+- Payment gateway

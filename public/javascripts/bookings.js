@@ -92,7 +92,12 @@ function calcTotalFee() {
   var totalTimeInMilliseconds = endsAtDate - startsAtDate;
   var totalTimeInHours = totalTimeInMilliseconds/1000/60/60;
 
-  var totalRentalFee = 40 * totalTimeInHours;
+  if (totalTimeInHours =< 0) {
+    var totalRentalFee = 0;  
+  } else {
+    var totalRentalFee = 40 * totalTimeInHours;  
+  }
+  
 
   $('#rentalFee').text(totalRentalFee);
   $('#totalFee').text(totalRentalFee + 25)
