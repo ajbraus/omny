@@ -18,11 +18,10 @@ DONE - Send email when new booking or contact
   DONE - or request a booking
 
 - bookings-new 
-  - two columns
-  - Validations
+  DONE - two columns
+  DONE - Validations
 
 - bookings-index
-
 
 - Make contacts work with "thank you" message once people sign up for alpha " you will be contacted shortly"  
 
