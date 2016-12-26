@@ -105,6 +105,13 @@ function calcTotalFee() {
 
 $(document).ready(function() {
 
+  $("#autocomplete").keypress(function(e) {
+      var code = (e.keyCode ? e.keyCode : e.which);
+      if(code == 13) { //Enter keycode
+          return false;
+      }
+  });
+
   // SET TOMORROW'S DATE AS DEFAULT
   var monthNames = ["January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"
