@@ -45,9 +45,9 @@ block content
                 //-     .col-xs-3.col-input-right
                 //-       .btn.btn-default.btn-block >1 Day
                 .form-group
-                  label(for='startsOn') Date
                   .row
                     .col-xs-5.col-input-left
+                      label(for='startsOnMonth') Month
                       select#starts-on-month.form-control(name='startsOnMonth' required)
                         option  - Month - 
                         option(value='January') January
@@ -63,6 +63,7 @@ block content
                         option(value='November') November
                         option(value='December') December
                     .col-xs-3.col-input-center
+                      label(for='startsOnDay') Day
                       select#starts-on-day.form-control(name='startsOnDay' required)
                         option  - Day - 
                         option(value='1') 1
@@ -97,148 +98,149 @@ block content
                         option(value='30') 30
                         option(value='31') 31
                     .col-xs-4.col-input-right
+                      label(for='startsOnYear') Year
                       select#starts-on-year.form-control(name='startsOnYear' required)
                         option  - Year - 
                         option(value='2016') 2016
                         option(value='2017') 2017
                         option(value='2018') 2018
-                  br
-                  .form-group
-                    .text-muted Times are in the time zone of your destination
-                    .row
-                      .col-xs-6.input-left
-                        .form-group
-                          label(for='startsAt') Start Time 
-                          select#starts-at.form-control(name="startsAt" required)
-                            option(value="08:00:00" selected) 8:00am
-                            option(value="08:30:00") 8:30am
-                            option(value="09:00:00") 9:00am
-                            option(value="09:30:00") 9:30am
-                            option(value="10:00:00") 10:00am
-                            option(value="10:30:00") 10:30am
-                            option(value="11:00:00") 11:00am
-                            option(value="11:30:00") 11:30am
-                            option(value="12:00:00") 12:00pm
-                            option(value="12:30:00") 12:30pm
-                            option(value="13:00:00") 1:00pm
-                            option(value="13:30:00") 1:30pm
-                            option(value="14:00:00") 2:00pm
-                            option(value="14:30:00") 2:30pm
-                            option(value="15:00:00") 3:00pm
-                            option(value="15:30:00") 3:30pm
-                            option(value="16:00:00") 4:00pm
-                            option(value="16:30:00") 4:30pm
-                            option(value="17:00:00") 5:00pm
-                            option(value="17:30:00") 5:30pm
-                            option(value="18:00:00") 6:00pm
-                            option(value="18:30:00") 6:30pm
-                            option(value="19:00:00") 7:00pm
-                            option(value="19:30:00") 7:30pm
-                            option(value="20:00:00") 8:00pm
-                            option(value="20:30:00") 8:30pm
-                            option(value="21:00:00") 9:00pm
-                            option(value="21:30:00") 9:30pm
-                            option(value="22:00:00") 10:00pm
-                            option(value="22:30:00") 10:30pm
-                            option(value="23:00:00") 11:00pm
-                            option(value="23:30:00") 11:30pm
-                            option(value="00:00:00") 12:00am
-                            option(value="00:30:00") 12:30am
-                            option(value="01:00:00") 1:00am
-                            option(value="01:30:00") 1:30am
-                            option(value="02:00:00") 2:00am
-                            option(value="02:30:00") 2:30am
-                            option(value="03:00:00") 3:00am
-                            option(value="03:30:00") 3:30am
-                            option(value="04:00:00") 4:00am
-                            option(value="04:30:00") 4:30am
-                            option(value="05:00:00") 5:00am
-                            option(value="05:30:00") 5:30am
-                            option(value="06:00:00") 6:00am
-                            option(value="06:30:00") 6:30am
-                            option(value="07:00:00") 7:00am
-                            option(value="07:30:00") 7:30am
-                      .col-xs-6.input-right
-                        .form-group
-                          label(for='endsAt') Finishing Time
-                          select#ends-at.form-control(name="endsAt" required)
-                            option(value="08:00:00") 8:00am
-                            option(value="08:30:00") 8:30am
-                            option(value="09:00:00") 9:00am
-                            option(value="09:30:00") 9:30am
-                            option(value="10:00:00") 10:00am
-                            option(value="10:30:00") 10:30am
-                            option(value="11:00:00") 11:00am
-                            option(value="11:30:00") 11:30am
-                            option(value="12:00:00") 12:00pm
-                            option(value="12:30:00") 12:30pm
-                            option(value="13:00:00") 1:00pm
-                            option(value="13:30:00") 1:30pm
-                            option(value="14:00:00") 2:00pm
-                            option(value="14:30:00") 2:30pm
-                            option(value="15:00:00") 3:00pm
-                            option(value="15:30:00") 3:30pm
-                            option(value="16:00:00") 4:00pm
-                            option(value="16:30:00") 4:30pm
-                            option(value="17:00:00" selected) 5:00pm
-                            option(value="17:30:00") 5:30pm
-                            option(value="18:00:00") 6:00pm
-                            option(value="18:30:00") 6:30pm
-                            option(value="19:00:00") 7:00pm
-                            option(value="19:30:00") 7:30pm
-                            option(value="20:00:00") 8:00pm
-                            option(value="20:30:00") 8:30pm
-                            option(value="21:00:00") 9:00pm
-                            option(value="21:30:00") 9:30pm
-                            option(value="22:00:00") 10:00pm
-                            option(value="22:30:00") 10:30pm
-                            option(value="23:00:00") 11:00pm
-                            option(value="23:30:00") 11:30pm
-                            option(value="00:00:00") 12:00am
-                            option(value="00:30:00") 12:30am
-                            option(value="01:00:00") 1:00am
-                            option(value="01:30:00") 1:30am
-                            option(value="02:00:00") 2:00am
-                            option(value="02:30:00") 2:30am
-                            option(value="03:00:00") 3:00am
-                            option(value="03:30:00") 3:30am
-                            option(value="04:00:00") 4:00am
-                            option(value="04:30:00") 4:30am
-                            option(value="05:00:00") 5:00am
-                            option(value="05:30:00") 5:30am
-                            option(value="06:00:00") 6:00am
-                            option(value="06:30:00") 6:30am
-                            option(value="07:00:00") 7:00am
-                            option(value="07:30:00") 7:30am
-                  
-                    //- hourly, whole day, half day (start time)
-                    .row
-                      .col-xs-6
-                        .form-group
-                          label Delivery Fee
-                          br
-                          | $#[span#deliveryFee 25]
-                      .col-xs-6
-                        .form-group
-                          label Rental Fee
-                          br
-                          | $#[span#rentalFee 150]
-              .row
-                .col-sm-6.col-md-4
-                  legend Details & Instructions
+                .form-group
+                  .row
+                    .col-xs-6.input-left
+                      .form-group
+                        label(for='startsAt') Start Time 
+                        select#starts-at.form-control(name="startsAt" required)
+                          option(value="08:00:00" selected) 8:00am
+                          option(value="08:30:00") 8:30am
+                          option(value="09:00:00") 9:00am
+                          option(value="09:30:00") 9:30am
+                          option(value="10:00:00") 10:00am
+                          option(value="10:30:00") 10:30am
+                          option(value="11:00:00") 11:00am
+                          option(value="11:30:00") 11:30am
+                          option(value="12:00:00") 12:00pm
+                          option(value="12:30:00") 12:30pm
+                          option(value="13:00:00") 1:00pm
+                          option(value="13:30:00") 1:30pm
+                          option(value="14:00:00") 2:00pm
+                          option(value="14:30:00") 2:30pm
+                          option(value="15:00:00") 3:00pm
+                          option(value="15:30:00") 3:30pm
+                          option(value="16:00:00") 4:00pm
+                          option(value="16:30:00") 4:30pm
+                          option(value="17:00:00") 5:00pm
+                          option(value="17:30:00") 5:30pm
+                          option(value="18:00:00") 6:00pm
+                          option(value="18:30:00") 6:30pm
+                          option(value="19:00:00") 7:00pm
+                          option(value="19:30:00") 7:30pm
+                          option(value="20:00:00") 8:00pm
+                          option(value="20:30:00") 8:30pm
+                          option(value="21:00:00") 9:00pm
+                          option(value="21:30:00") 9:30pm
+                          option(value="22:00:00") 10:00pm
+                          option(value="22:30:00") 10:30pm
+                          option(value="23:00:00") 11:00pm
+                          option(value="23:30:00") 11:30pm
+                          option(value="00:00:00") 12:00am
+                          option(value="00:30:00") 12:30am
+                          option(value="01:00:00") 1:00am
+                          option(value="01:30:00") 1:30am
+                          option(value="02:00:00") 2:00am
+                          option(value="02:30:00") 2:30am
+                          option(value="03:00:00") 3:00am
+                          option(value="03:30:00") 3:30am
+                          option(value="04:00:00") 4:00am
+                          option(value="04:30:00") 4:30am
+                          option(value="05:00:00") 5:00am
+                          option(value="05:30:00") 5:30am
+                          option(value="06:00:00") 6:00am
+                          option(value="06:30:00") 6:30am
+                          option(value="07:00:00") 7:00am
+                          option(value="07:30:00") 7:30am
+                    .col-xs-6.input-right
+                      .form-group
+                        label(for='endsAt') Finishing Time
+                        select#ends-at.form-control(name="endsAt" required)
+                          option(value="08:00:00") 8:00am
+                          option(value="08:30:00") 8:30am
+                          option(value="09:00:00") 9:00am
+                          option(value="09:30:00") 9:30am
+                          option(value="10:00:00") 10:00am
+                          option(value="10:30:00") 10:30am
+                          option(value="11:00:00") 11:00am
+                          option(value="11:30:00") 11:30am
+                          option(value="12:00:00") 12:00pm
+                          option(value="12:30:00") 12:30pm
+                          option(value="13:00:00") 1:00pm
+                          option(value="13:30:00") 1:30pm
+                          option(value="14:00:00") 2:00pm
+                          option(value="14:30:00") 2:30pm
+                          option(value="15:00:00") 3:00pm
+                          option(value="15:30:00") 3:30pm
+                          option(value="16:00:00") 4:00pm
+                          option(value="16:30:00") 4:30pm
+                          option(value="17:00:00" selected) 5:00pm
+                          option(value="17:30:00") 5:30pm
+                          option(value="18:00:00") 6:00pm
+                          option(value="18:30:00") 6:30pm
+                          option(value="19:00:00") 7:00pm
+                          option(value="19:30:00") 7:30pm
+                          option(value="20:00:00") 8:00pm
+                          option(value="20:30:00") 8:30pm
+                          option(value="21:00:00") 9:00pm
+                          option(value="21:30:00") 9:30pm
+                          option(value="22:00:00") 10:00pm
+                          option(value="22:30:00") 10:30pm
+                          option(value="23:00:00") 11:00pm
+                          option(value="23:30:00") 11:30pm
+                          option(value="00:00:00") 12:00am
+                          option(value="00:30:00") 12:30am
+                          option(value="01:00:00") 1:00am
+                          option(value="01:30:00") 1:30am
+                          option(value="02:00:00") 2:00am
+                          option(value="02:30:00") 2:30am
+                          option(value="03:00:00") 3:00am
+                          option(value="03:30:00") 3:30am
+                          option(value="04:00:00") 4:00am
+                          option(value="04:30:00") 4:30am
+                          option(value="05:00:00") 5:00am
+                          option(value="05:30:00") 5:30am
+                          option(value="06:00:00") 6:00am
+                          option(value="06:30:00") 6:30am
+                          option(value="07:00:00") 7:00am
+                          option(value="07:30:00") 7:30am
+                  .text-muted Times are in the time zone of your destination
                   .form-group
                     label(for='instructions') Details, Instructions, or Special Requests
                     textarea.form-control(name="instructions" placeholder='Are you meeting someone or attending an event?', type='text')
+
+              .row
+                .col-sm-6.col-md-4
+                  legend Payment and Confirmation
                   //- .form-group
                   //-   label(for='city') Referral Code
                   //-   input.form-control#referral-code(placeholder="" name="referralCode")
-                  .text-muted We will contact you within 24 hours to confirm your booking. We'll ask you then to pay via credit card or paypal.
+                  .text-muted We will contact you within 24 hours to confirm your booking.
                   br
-                  .form-group.text-right
-                    label Estimated Total Fee
-                    br
-                    | $#[span#totalFee ]
-                  button.btn.btn-primary.btn-block#request-teleporation(type="submit") Request Teleportation
+                  .lead
+                    .clearfix
+                      .pull-left
+                        b Delivery Fee: 
+                      .pull-right
+                        | $#[span#deliveryFee 25]
+                    .clearfix
+                      .pull-left
+                        b Rental Fee: 
+                      .pull-right
+                        | $#[span#rentalFee 150]
+                    hr
+                    .clearfix
+                      .pull-left
+                        b Estimated Total Fee
+                      .pull-right
+                        | $#[span#totalFee ]
+                  button.btn.btn-primary.btn-lg.btn-block#request-teleporation(type="submit") Request Teleportation
 
   script(type='text/javascript').
     window.onbeforeunload = function() {
