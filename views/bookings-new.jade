@@ -11,7 +11,7 @@ block content
           form#booking-form(action="#")
             .row
               .col-sm-6.col-md-4
-                legend Destination
+                legend Destination & Traveler
                 .form-group
                   label(for='city') City
                   select.form-control#city(name="city" required)
@@ -24,17 +24,15 @@ block content
                   input#address(name="address" type="hidden")
                   input#lat(name="lat" type="hidden")
                   input#lng(name="lng" type="hidden")
-                br
-                legend Traveler
                 .form-group
-                  label(for='name') Full Name
+                  label(for='name') Traveler's Full Name
                   input#name.form-control(name="name" required)
                 .form-group
-                  label(for='phone' required) Phone Number
+                  label(for='phone' required) Traveler's Phone Number
                   input#phone.form-control(placeholder='+1-555-555-5555', type='text')
 
               .col-sm-6.col-md-4
-                legend Date and Time
+                legend Date, Time, and Fair
                 //- .form-group
                 //-   label(for='rate') Choose Your Rate 
                 //-   .row              
@@ -224,15 +222,9 @@ block content
                           label Rental Fee
                           br
                           | $#[span#rentalFee 150]
-                    hr
-                    .form-group.text-right
-                      label Estimated Total
-                      br
-                      | $#[span#totalFee ]
-                  br
               .row
                 .col-sm-6.col-md-4
-                  legend Instructions
+                  legend Details & Instructions
                   .form-group
                     label(for='instructions') Details, Instructions, or Special Requests
                     textarea.form-control(name="instructions" placeholder='Are you meeting someone or attending an event?', type='text')
@@ -241,6 +233,10 @@ block content
                   //-   input.form-control#referral-code(placeholder="" name="referralCode")
                   .text-muted We will contact you within 24 hours to confirm your booking. We'll ask you then to pay via credit card or paypal.
                   br
+                  .form-group.text-right
+                    label Estimated Total Fee
+                    br
+                    | $#[span#totalFee ]
                   button.btn.btn-primary.btn-block#request-teleporation(type="submit") Request Teleportation
 
   script(type='text/javascript').
