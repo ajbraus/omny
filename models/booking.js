@@ -22,7 +22,7 @@ var BookingSchema = new Schema({
   , totalFeeInCents               : Number
 
   , instructions                  : String
-  // , referralCode                  : String
+  , referralCode                  : String
 
   // , taxPerCent                    : Number
   // , taxInCents                    : Number

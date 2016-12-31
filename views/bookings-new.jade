@@ -13,22 +13,22 @@ block content
               .col-sm-6.col-md-4
                 legend Destination & Traveler
                 .form-group
-                  label(for='city') City
+                  label(for='city') City*
                   select.form-control#city(name="city" required)
                     option(value="San Francisco" selected) San Francisco Bay Area
                     //- option(value="Los Angeles") Los Angeles
                 .form-group
-                  label(for='location') Place Name or Address
+                  label(for='location') Place Name or Address*
                   input#autocomplete.form-control(placeholder='Enter the place name or address' type='text' required)
                   input#place(name="place" type="hidden")
                   input#address(name="address" type="hidden")
                   input#lat(name="lat" type="hidden")
                   input#lng(name="lng" type="hidden")
                 .form-group
-                  label(for='name') Traveler's Full Name
+                  label(for='name') Traveler's Full Name*
                   input#name.form-control(name="name" required)
                 .form-group
-                  label(for='phone' required) Traveler's Phone Number
+                  label(for='phone' required) Traveler's Phone Number*
                   input#phone.form-control(placeholder='+1-555-555-5555', type='text')
 
               .col-sm-6.col-md-4
@@ -47,7 +47,7 @@ block content
                 .form-group
                   .row
                     .col-xs-5.col-input-left
-                      label(for='startsOnMonth') Month
+                      label(for='startsOnMonth') Month*
                       select#starts-on-month.form-control(name='startsOnMonth' required)
                         option  - Month - 
                         option(value='January') January
@@ -63,7 +63,7 @@ block content
                         option(value='November') November
                         option(value='December') December
                     .col-xs-3.col-input-center
-                      label(for='startsOnDay') Day
+                      label(for='startsOnDay') Day*
                       select#starts-on-day.form-control(name='startsOnDay' required)
                         option  - Day - 
                         option(value='1') 1
@@ -98,7 +98,7 @@ block content
                         option(value='30') 30
                         option(value='31') 31
                     .col-xs-4.col-input-right
-                      label(for='startsOnYear') Year
+                      label(for='startsOnYear') Year*
                       select#starts-on-year.form-control(name='startsOnYear' required)
                         option  - Year - 
                         option(value='2016') 2016
@@ -108,7 +108,7 @@ block content
                   .row
                     .col-xs-6.input-left
                       .form-group
-                        label(for='startsAt') Start Time 
+                        label(for='startsAt') Start Time*
                         select#starts-at.form-control(name="startsAt" required)
                           option(value="08:00:00" selected) 8:00am
                           option(value="08:30:00") 8:30am
@@ -160,7 +160,7 @@ block content
                           option(value="07:30:00") 7:30am
                     .col-xs-6.input-right
                       .form-group
-                        label(for='endsAt') Finishing Time
+                        label(for='endsAt') Finishing Time*
                         select#ends-at.form-control(name="endsAt" required)
                           option(value="08:00:00") 8:00am
                           option(value="08:30:00") 8:30am
@@ -214,6 +214,9 @@ block content
                   .form-group
                     label(for='instructions') Details, Instructions, or Special Requests
                     textarea.form-control(name="instructions" placeholder='Are you meeting someone or attending an event?', type='text')
+                  .form-group
+                    label(for='referralCode') Referral Code
+                    input.form-control(name="referralCode" placeholder='', type='text')
 
               .row
                 .col-sm-6.col-md-4
