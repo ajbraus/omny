@@ -131,12 +131,18 @@ $(document).ready(function() {
   // SUBMIT FORM
   $('#request-teleporation').click(function(e) {
     e.preventDefault();
-    var month = monthNames.indexOf($('#starts-on-month').val());
+    var month = monthNames.indexOf($('#starts-on-month').val()) + 1;
     var day = $('#starts-on-day').val();
     var year = $('#starts-on-year').val();
     var startsAt = $('#starts-at').val();
     var endsAt = $('#ends-at').val();
 
+    console.log(month)
+    console.log(day)
+    console.log(year)
+    console.log(startsAt)
+    // "2011-10-10T14:48:00"
+    // Date.parse('Wed, 09 Aug 1995 00:00:00');
     var startsAtDateTime = Date.parse(month + " " + day + " " + year + " " + startsAt);
     var endsAtDateTime = Date.parse(month + " " + day + " " + year + " " + endsAt);
     var hours = (endsAtDateTime - startsAtDateTime)/1000/60/60;
