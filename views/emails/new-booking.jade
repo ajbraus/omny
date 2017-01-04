@@ -8,11 +8,11 @@ block body
     p #{booking.place}
     p #{booking.address}
     p #{booking.referralCode}
-    p='Date: ' + moment(obj.startsAt).format("YYYY/MM/DD") + ')'
+    p='Date: ' + moment(booking.startsAt).format("YYYY/MM/DD") + ')'
     p
-      span='Date: ' + moment(obj.startsAt).format("YYYY/MM/DD") + ')' 
+      span='Date: ' + moment(booking.startsAt).format("YYYY/MM/DD") + ')' 
       | - 
-      p='Date: ' + moment(obj.endsAt).format("YYYY/MM/DD") + ')'
+      p='Date: ' + moment(booking.endsAt).format("YYYY/MM/DD") + ')'
     p #{booking.endsAt}
     p #{booking.hours}
   p Please get back to them within 24 hours. Thanks!
