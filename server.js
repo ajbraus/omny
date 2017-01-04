@@ -17,7 +17,7 @@ var sm = require('sitemap');
 
 var app = express();
 
-app.locals.moment = require('moment');
+app.locals.moment = require('moment-timezone');
 
 var sitemap = sm.createSitemap ({
   hostname: 'http://www.beomny.com',

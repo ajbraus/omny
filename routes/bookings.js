@@ -25,7 +25,7 @@ module.exports = function(app) {
 
       app.mailer.send('emails/new-booking', {
         to: "ajbraus@gmail.com",
-        subject: 'New booking' + booking.name + " - " + booking.phone,
+        subject: 'New booking ' + booking.name + " - " + booking.phone,
         booking: booking
       }, function (err) {
         if (err) { console.log(err); return }
