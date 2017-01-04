@@ -8,7 +8,7 @@ block body
     p #{booking.place}
     p #{booking.address}
     p #{booking.referralCode}
-    p='Date: ' + moment(booking.startsAt).tz('America/Los_Angeles').format("MM/DD/YYYY h:mm a")
+    p='Date: ' + moment(booking.startsAt).tz('America/Los_Angeles').format("dddd MMMM Do YYYY")
     p='Starting At: ' + moment(booking.startsAt).tz('America/Los_Angeles').format("h:mm a") + " GMT"
     p='Ending At: ' + moment(booking.endsAt).tz('America/Los_Angeles').format("h:mm a") + " GMT"
     p Total Hours: #{booking.hours}
