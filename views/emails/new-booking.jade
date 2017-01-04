@@ -4,15 +4,12 @@ block body
   p
     strong Hi there Omny Teleport Technician
     p #{booking.name} just requested a booking
-    p #{booking.email} - #{booking.phone}
+    p Phone: #{booking.phone}
     p #{booking.place}
     p #{booking.address}
     p #{booking.referralCode}
-    p='Date: ' + moment(booking.startsAt).format("YYYY/MM/DD") + ')'
-    p
-      span='Date: ' + moment(booking.startsAt).format("YYYY/MM/DD") + ')' 
-      | - 
-      p='Date: ' + moment(booking.endsAt).format("YYYY/MM/DD") + ')'
-    p #{booking.endsAt}
-    p #{booking.hours}
+    p='Date: ' + moment(booking.startsAt).format("MM/DD/YYYY h:mm a")
+    p='Starting At: ' + moment(booking.startsAt).format("h:mm a")
+    p='Ending At: ' + moment(booking.endsAt).format("h:mm a")
+    p Total Hours: #{booking.hours}
   p Please get back to them within 24 hours. Thanks!
