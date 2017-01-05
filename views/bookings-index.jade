@@ -1,23 +1,42 @@
 extends layout
 
 block content
+
   section
     .container
       .row
-        .col-sm-8.col-sm-offset-2
+        .col-sm-6
+          h3 Current Bookings
           .list-group
-            - each booking in bookings
-              .list-group-item
-                p
-                  = booking.name
-                p
-                  = booking.phone
-                p
-                  = booking.place
-                p
-                  = booking.address
-                p
-                  = booking.startsAt
-                p
-                  = booking.hours
+            - each booking in currentBookings
+              include booking.jade
+
+        .col-sm-6
+          h3 Upcoming Bookings
+          .list-group
+            - each booking in futureBookings
+              include booking.jade
+      hr
+      .row
+        .col-xs-12
+          h3 Past Bookings
+          table.table.table-striped
+            tr
+              th Name
+              th Email
+              th Phone
+              th Place
+              th Address
+              th Date
+              th Time
+            - each booking in pastBookings
+              tr
+                td #{booking.name}
+                td #{booking.email}
+                td #{booking.phone}
+                td #{booking.place}
+                td #{booking.address}
+                td #{moment(booking.startsAt).tz('America/Los_Angeles').format("dddd MMMM Do YYYY")}
+                td #{moment(booking.startsAt).tz('America/Los_Angeles').format("h:mm a")} - #{moment(booking.endsAt).tz('America/Los_Angeles').format("h:mm a")}
+
 

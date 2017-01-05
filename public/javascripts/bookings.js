@@ -39,7 +39,7 @@ function setBounds(geocoder, map) {
   geocoder.geocode({'address': city}, function(results, status) {
     if (status === 'OK') {
       map.setCenter(results[0].geometry.location);
-      map.setZoom(8);
+      map.setZoom(11);
 
       var circle = new google.maps.Circle({
         center: results[0].geometry.location,
@@ -137,18 +137,14 @@ $(document).ready(function() {
     var startsAt = $('#starts-at').val();
     var endsAt = $('#ends-at').val();
 
-    console.log(month)
-    console.log(day)
-    console.log(year)
-    console.log(startsAt)
-    // "2011-10-10T14:48:00"
-    // Date.parse('Wed, 09 Aug 1995 00:00:00');
     var startsAtDateTime = Date.parse(month + " " + day + " " + year + " " + startsAt);
     var endsAtDateTime = Date.parse(month + " " + day + " " + year + " " + endsAt);
     var hours = (endsAtDateTime - startsAtDateTime)/1000/60/60;
 
     var booking = {
+
       name: $('#name').val(),
+      email: $('#email').val(),
       phone: $('#phone').val(),
 
       place: $('#place').val(),
@@ -166,11 +162,11 @@ $(document).ready(function() {
       deliveryFeeInCents: parseInt($('#deliveryFee').text())*100,
       totalFeeInCents: parseInt($('#totalFee').text())*100
     }
-    console.log(booking)
+
     $.post('/bookings', booking)
         .done(function(data){ 
-          // CONFIRMATION SENT BY EMAIL
-          console.log(data);
+          alert('Booking request confirmed.')
+          window.location.href('/faq')
         })
         .fail(function(xhr, status, error) {
           console.log(error);

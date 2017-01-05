@@ -1,3 +1,13 @@
+
+DONE Email
+DONE Confirmation email
+Confirmation notice
+
+youtube for how to use the double
+FAQ
+
+
+
 - New booking... calendly.com
   DONE - Location bounds
   DONE - change the city => changes the bias of google places

@@ -1,0 +1,20 @@
+extends email-layout
+
+block body
+  p
+    strong Hi there Omny Teleport Technician
+
+    h3 Booking Details
+    | #[b Traveler] - #{booking.name} (#{booking.email}, #{booking.phone})
+    br
+    | #[b Destination] - #{booking.place}
+    br
+    | #[b Address] - #{booking.address}
+    br
+    | #[b Referral] - #{booking.referralCode}
+    br
+    | #[b Date & Time] - #{moment(booking.startsAt).tz('America/Los_Angeles').format("dddd MMMM Do YYYY")} #{moment(booking.startsAt).tz('America/Los_Angeles').format("h:mm a")} - #{moment(booking.endsAt).tz('America/Los_Angeles').format("h:mm a")} (#{booking.hours} hrs)
+    br
+    | #[b Estimated Fare:] #{booking.totalFeeInCents/100}
+    
+  p Please get back to them within 24 hours. Thanks!

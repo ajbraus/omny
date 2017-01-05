@@ -11,7 +11,7 @@ block content
           form#booking-form(action="#")
             .row
               .col-sm-6.col-md-4
-                legend Destination & Traveler
+                legend Destination
                 .form-group
                   label(for='city') City*
                   select.form-control#city(name="city" required)
@@ -24,15 +24,19 @@ block content
                   input#address(name="address" type="hidden")
                   input#lat(name="lat" type="hidden")
                   input#lng(name="lng" type="hidden")
+                legend Traveler
                 .form-group
                   label(for='name') Traveler's Full Name*
                   input#name.form-control(name="name" required)
+                .form-group
+                  label(for='email') Traveler's Email*
+                  input#email.form-control(name="email" required)
                 .form-group
                   label(for='phone' required) Traveler's Phone Number*
                   input#phone.form-control(placeholder='+1-555-555-5555', type='text')
 
               .col-sm-6.col-md-4
-                legend Date, Time, and Fair
+                legend Date & Time
                 //- .form-group
                 //-   label(for='rate') Choose Your Rate 
                 //-   .row              
@@ -211,16 +215,15 @@ block content
                           option(value="07:00:00") 7:00am
                           option(value="07:30:00") 7:30am
                   .text-muted Times are in the time zone of your destination
+                  br
+                  legend Instructions & Referral
                   .form-group
-                    label(for='instructions') Details, Instructions, or Special Requests
-                    textarea.form-control(name="instructions" placeholder='Are you meeting someone or attending an event?', type='text')
-                  .form-group
-                    label(for='referralCode') Referral Code
-                    input.form-control(name="referralCode" placeholder='', type='text')
+                    label(for='instructions') Details
+                    textarea.form-control(name="instructions" rows="5" placeholder='Are you attending an event or meeting anyone?', type='text')
 
               .row
                 .col-sm-6.col-md-4
-                  legend Payment and Confirmation
+                  legend Fare & Confirmation
                   //- .form-group
                   //-   label(for='city') Referral Code
                   //-   input.form-control#referral-code(placeholder="" name="referralCode")
@@ -243,6 +246,10 @@ block content
                         b Estimated Total Fee
                       .pull-right
                         | $#[span#totalFee ]
+                  .form-group
+                    label(for='referralCode') Referral or Coupon Code
+                    input.form-control(name="referralCode" placeholder='', type='text')
+
                   button.btn.btn-primary.btn-lg.btn-block#request-teleporation(type="submit") Request Teleportation
 
   script(type='text/javascript').

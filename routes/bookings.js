@@ -1,13 +1,17 @@
 var Booking = require('../models/booking.js');
+var _ = require('lodash')
 
 module.exports = function(app) {
 
   app.get('/bookings', function(req, res, next) {
-    Booking.find(function (err, bookings) {
-      res.render('bookings-index', { bookings: bookings })
-    })
+    Booking.find().sort('-startsAt').exec(function (err, bookings) {
+      var futureBookings = _.filter(bookings, function(b) { return b.startsAt > new Date(); });
+      var pastBookings = _.filter(bookings, function(b) { return b.endsAt < new Date(); });
+      var currentBookings = _.filter(bookings, function(b) { return b.startsAt < new Date() && b.endsAt > new Date(); });
 
-    //{ createdAt: { $gte: new Date() } }
+      res.render('bookings-index', { futureBookings: futureBookings, pastBookings: pastBookings, currentBookings })
+    })
+    //
   });
 
   app.get('/bookings/new', function(req, res, next) {
@@ -23,7 +27,15 @@ module.exports = function(app) {
         return res.status(401).send(err);
       }
 
-      app.mailer.send('emails/new-booking', {
+      app.mailer.send('emails/booking-confirm', {
+        to: booking.email,
+        subject: 'Omny Booking Confirmed!',
+        booking: booking
+      }, function (err) {
+        if (err) { console.log(err); return }
+      });
+
+      app.mailer.send('emails/booking-new', {
         to: "ajbraus@gmail.com",
         subject: 'New booking ' + booking.name + " - " + booking.phone,
         booking: booking

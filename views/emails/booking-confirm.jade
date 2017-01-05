@@ -1,0 +1,44 @@
+extends email-layout
+
+block body
+  p Hi there #[b #{booking.name}],
+    p Thank you so much for requesting a booking for an Omny. Here are the details and instructions for your request. We will be contacting you for payment to confirm your booking.
+  
+  h3 Booking Details
+  | #[b Traveler] - #{booking.name} (#{booking.email}, #{booking.phone})
+  br
+  | #[b Destination] - #{booking.place}
+  br
+  | #[b Address] - #{booking.address}
+  br
+  | #[b Date & Time] - #{moment(booking.startsAt).tz('America/Los_Angeles').format("dddd MMMM Do YYYY")} #{moment(booking.startsAt).tz('America/Los_Angeles').format("h:mm a")} - #{moment(booking.endsAt).tz('America/Los_Angeles').format("h:mm a")} (#{booking.hours} hrs)
+  br
+  | #[b Estimated Fare:] #{booking.totalFeeInCents/100}
+  br
+  | (If any of these details are not correct, please reply to this email. Thanks!)
+
+
+  h3 Key Instructions
+  p 
+    b 1. Use Your Laptop or iPad
+    br 
+    | We recommend the Double Robotics #[a(href="drive.doublerobotics.com") website] or #[a(href="https://itunes.apple.com/us/app/double/id589230178?mt=8") iPad app] to drive an Omny. If you use the Double Robotics mobile app, it is not as comfortable.
+  p
+    b 2. You'll Need a Double Robotics Account
+    br
+    | Please create your account using the email on this request - #{booking.email}. If you create an account with a different email, you will not receive the pass to use the double.
+  p
+    b 3. Enjoy, but Take it Slow
+    br
+    | Using an Omny is an amazing and fun experience. Remember though, for the first few minutes, take it slow. Explore your surroundings and the controls carefully. Identify any potential  obstacles you might face.
+  p
+    b 4. If You Want Help]
+    br 
+    | If you need help, ask people around you politely. You can also call or text 608-770-0230 for immediate or emergency assistance.
+  p 
+    b 5. The Omny can Fall Over
+    br 
+    | The Omny is dynamically balanced with gyroscopes (like a Segue), but if someone picks up the Omny and then sets it down again, it will fall over. After being set back down, the Omny takes about 5 seconds to regain its balance.
+  
+  h3 The Fine Print
+  p The Omny is an advanced piece of #[b delicate] and #[b expensive] technology. #[b TAKE IT SLOW]. Please be very, very careful. Do not take risks with the Omny and ask those around you for help. Like a rental car, if there is damage  done to the Omny, we will ask that you reimburse us for any repairs or replacement.

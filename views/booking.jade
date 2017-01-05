@@ -1,0 +1,24 @@
+.list-group-item
+  .row
+    .col-sm-4
+      p
+        b.large #{booking.name}
+        br
+        | #{booking.email}
+        br
+        | #{booking.phone}
+    .col-sm-8
+      p
+        | #{booking.place}
+        br
+        a(href="https://www.google.com/maps/dir/Current+Location/#{booking.address}" target="_blank") #{booking.address}
+        br
+        | #[b Date:] #{moment(booking.startsAt).tz('America/Los_Angeles').format("dddd MMMM Do YYYY")}
+        br
+        | #[b Time: ] #{moment(booking.startsAt).tz('America/Los_Angeles').format("h:mm a")} - #{moment(booking.endsAt).tz('America/Los_Angeles').format("h:mm a")} (#{booking.hours} hrs)
+  .row
+    .col-xs-12
+      p
+        label Instructions
+        br
+        | #{booking.instructions}

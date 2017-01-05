@@ -6,6 +6,7 @@ var BookingSchema = new Schema({
   , updatedAt                     : { type: Date }
 
   , name                          : { type: String }
+  , email                         : { type: String }
   , phone                         : { type: String }
 
   , place                         : { type: String }
