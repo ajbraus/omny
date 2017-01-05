@@ -7,11 +7,15 @@ $(document).ready(function() {
     var contact = $(this).serialize();
 
     $.post('/contacts', contact, function(response) {
+      $('#alert').addClass("alert-success")
+      $('#alert').append('Thank you for requesting a free trial. We will contact you within 24 hours.')
+      $('#alert').fadeIn();
       $('#contact-form')[0].reset();
-      alert("Message sent! Thank you for contacting us.")
     })
     .fail(function(response) {
-      alert(response.data);
+      $('#alert').addClass("alert-danger")
+      $('#alert').append('There was a problem. Please try again or contact us for help.')
+      $('#alert').fadeIn();
     })
 
     return false;

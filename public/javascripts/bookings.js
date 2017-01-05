@@ -98,7 +98,6 @@ function calcTotalFee() {
     var totalRentalFee = 40 * totalTimeInHours;  
   }
   
-
   $('#rentalFee').text(totalRentalFee);
   $('#totalFee').text(totalRentalFee + 25)
 }
@@ -165,11 +164,15 @@ $(document).ready(function() {
 
     $.post('/bookings', booking)
         .done(function(data){ 
-          alert('Booking request confirmed.')
-          window.location.href('/faq')
+          $('#alert').addClass("alert-success")
+          $('#alert').append('Omny Requested! We sent you an email with further details and instructions.')
+          $('#alert').fadeIn();
+          location.assign('/')
         })
         .fail(function(xhr, status, error) {
-          console.log(error);
+          $('#alert').addClass("alert-danger")
+          $('#alert').append('There was a problem. Please try again or contact us for help.')
+          $('#alert').fadeIn();
         });
   });
 

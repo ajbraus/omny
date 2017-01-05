@@ -86,3 +86,9 @@ section {
 hr.dark {
   border: 1px solid #353839
 }
+
+.alert {
+  position: absolute;
+  width: 100%;
+  top: 15px;
+}

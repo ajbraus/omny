@@ -1,12 +1,21 @@
 
-DONE Email
-DONE Confirmation email
-Confirmation notice
+Rate your experience
 
 youtube for how to use the double
 FAQ
+You are on the hook for damages
+
+Viral referrals - when you reserve you get a code to send out referrals and you both get $25 off (free delivery) your next Omny.
 
 
+-----------------
+
+DONE Email
+DONE Confirmation email
+DONE Confirmation notice
+DONE google analytics
+
+------------------
 
 - New booking... calendly.com
   DONE - Location bounds
@@ -30,7 +39,6 @@ DONE - Send email when new booking or contact
 - bookings-new 
   DONE - two columns
   DONE - Validations
-
 
 -----------
 

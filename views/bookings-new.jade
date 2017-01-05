@@ -253,8 +253,8 @@ block content
                   button.btn.btn-primary.btn-lg.btn-block#request-teleporation(type="submit") Request Teleportation
 
   script(type='text/javascript').
-    window.onbeforeunload = function() {
-      return "You will lose your work. Are you sure you want to navigate away?";
-    }
+    //- window.onbeforeunload = function() {
+    //-   return "You will lose your work. Are you sure you want to navigate away?";
+    //- }
   script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDKk2JgZEwGLEsq11G-NLv8j_vMMT-suzw&libraries=places&callback=initAutocomplete', async='', defer='')
   script(type="text/javascript" src='/javascripts/bookings.js')
