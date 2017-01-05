@@ -27,7 +27,7 @@ module.exports = function(app) {
         return res.status(401).send(err);
       }
 
-      app.mailer.send('emails/booking-confirm', {
+      app.mailer.send('emails/booking-requested', {
         to: booking.email,
         subject: 'Omny Booking Confirmed!',
         booking: booking
