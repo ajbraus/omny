@@ -25,6 +25,16 @@ section {
   color: white;
 }
 
+.circle-background {
+  background-image: url('/images/circle.png');
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size:  cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: none;
+}
+
 .form-inline .form-group {
   margin-right: 5px;
 }
@@ -40,8 +50,8 @@ section {
   font-weight: 100;
 }
 
-.footer {
-  background: black;
+.night {
+  background: #3B3B3B;
   color: white;
 }
 

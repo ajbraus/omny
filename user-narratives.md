@@ -8,7 +8,7 @@ email goes to admin & traveler
 admin contacts traveler and collects payment
 admin delivers Omny, connects it to wifi, and watches the traveler for first 10-30 min to confirm they are connected and operating the omny carefully, answers any questions
 admin picks up Omny
-traveler reviews experience
+admin contacts traveler and asks how it went
 
 
 # Booking (future state)
@@ -21,5 +21,3 @@ Pays
 admin delivers Omny, connects it to wifi, and watches the traveler for first 10-30 min to confirm they are connected and operating the omny carefully, answers any questions
 admin picks up Omny
 traveler reviews experience
-
-

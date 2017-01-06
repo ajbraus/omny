@@ -1,12 +1,15 @@
 extends layout
 
 block vars
-  - var titleText = "Omny - Teleport for $65";
+  - var titleText = "Omny - Teleport for $65 to San Francisco";
   - var descriptionText = "Be present anywhere in the San Francisco Bay Area. Instantly.";
   - var ogImageFile = "host.jpg"
 
 block content
-  section.jumbotron.teleport-pic.text-center
+  .text-center.circle-background
+    br
+    br
+    br
     br
     br
     br
@@ -18,11 +21,16 @@ block content
     br
     br
     br
+    .container
+      .row
+        .col-sm-8.col-sm-offset-2
+          .embed-responsive.embed-responsive-16by9
+            iframe.embed-responsive-item(width="560" height="315" src="https://www.youtube.com/embed/ho1RDiZ5Xew?start=14" frameborder="0" allowfullscreen)
     br
     br
     br
     .row
-      .col-xs-8.col-xs-offset-2
+      .col-sm-10.col-sm-offset-1
         form#contact-form.form-inline
           .form-group
             input.form-control.form-control-lg(name="email" autofocus="true" placeholder='jane.doe@gmail.com')
@@ -40,8 +48,19 @@ block content
     //- | Sign up and share your code to try teleportation sooner.
     //- br
     //- | There are 2345 people in line ahead of you.
-
-  section
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+  br
+  br
+  br
+  section.night
     .container
       .row
         h2.text-center Compare Teleportating to Flying
@@ -83,8 +102,8 @@ block content
               b $670 - Total
               br
               | 16 Hours away from your life
- 
-  hr
+    br
+    br
   section
     .container
       h2.text-center How Omny Works
@@ -99,21 +118,15 @@ block content
         .col-sm-4
           h2.text-center 
             i.icon.ion-ios-cloud-download 
-            | Download
+            | Confirm & Pay
           br
-          p.lead Before your reservation begins download the #[a(href="https://itunes.apple.com/us/app/double/id589230178?mt=8") Double Robotics app] from the app store on your iPhone, iPad, or register an account at #[a(href="https://drive.doublerobotics.com") drive.doublerobotics.com].
+          p.lead An Omny agent will connect with you to confirm your booking, do a test drive, and collect payment.
         .col-sm-4
           h2.text-center 
             i.icon.ion-radio-waves 
             | Teleport
           br
-          p.lead At the time of your reservation, use your confirmation code to log into your host and begin. When you are done, leave review of your experience. If you aren't 100% satisfied, we'll give you your money back.
-  section
-    .container
-      .col-sm-10.col-sm-offset-1
-        .embed-responsive.embed-responsive-16by9
-          iframe.embed-responsive-item(width="560" height="315" src="https://www.youtube.com/embed/ho1RDiZ5Xew?start=14" frameborder="0" allowfullscreen)
-        //- img.img-responsive(src="/images/host.jpg")
+          p.lead Use your invitation link to log into your host and begin. When you are done, leave review of your experience. If you aren't 100% satisfied, we'll give you your money back.
   hr
   section
     .container
