@@ -15,6 +15,6 @@ block body
     br
     | #[b Date & Time] - #{moment(booking.startsAt).tz('America/Los_Angeles').format("dddd MMMM Do YYYY")} #{moment(booking.startsAt).tz('America/Los_Angeles').format("h:mm a")} - #{moment(booking.endsAt).tz('America/Los_Angeles').format("h:mm a")} (#{booking.hours} hrs)
     br
-    | #[b Estimated Fare:] #{booking.totalFeeInCents/100}
+    | #[b Estimated Fare:] $#{booking.totalFeeInCents/100}
     
   p Please get back to them within 24 hours. Thanks!

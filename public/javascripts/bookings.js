@@ -167,7 +167,8 @@ $(document).ready(function() {
           $('#alert').addClass("alert-success")
           $('#alert').append('Omny Requested! We sent you an email with further details and instructions.')
           $('#alert').fadeIn();
-          location.assign('/')
+          $('#booking-form')[0].reset();
+          // location.assign('/')
         })
         .fail(function(xhr, status, error) {
           $('#alert').addClass("alert-danger")
