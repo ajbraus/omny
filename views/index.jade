@@ -6,28 +6,18 @@ block vars
   - var ogImageFile = "host.jpg"
 
 block content
-  .text-center.circle-background
+  .text-center
     br
-    br
-    br
-    br
-    br
-    br
-    br
+
     h1 
-      | Telepresence Services For Hire
+      | On Demand Telepresencing
     .lead
-      | Telepresence to and around the San Francisco Bay Area for as little as $65
-    br
-    br
-    br
+      | Telepresence to and around San Francisco for as little as $65
     .container
       .row
-        .col-sm-8.col-sm-offset-2
+        .col-sm-6.col-sm-offset-3
           .embed-responsive.embed-responsive-16by9
             iframe.embed-responsive-item(width="560" height="315" src="https://www.youtube.com/embed/ho1RDiZ5Xew?start=14" frameborder="0" allowfullscreen)
-    br
-    br
     br
     .row
       .col-sm-10.col-sm-offset-1
@@ -48,19 +38,34 @@ block content
     //- | Sign up and share your code to try telepresencing sooner.
     //- br
     //- | There are 2345 people in line ahead of you.
-    br
-    br
-    br
-    br
-    br
-    br
-    br
-    br
-    br
   br
   br
   br
   section.night
+    .container
+      h2.text-center How Omny Works
+      br
+      .row
+        .col-sm-4
+          h2.text-center 
+            i.icon.ion-calendar 
+            | Schedule your Trip
+          br
+          p.lead #[a(href="/bookings/new") Book your trip] online at least 24 hours in advance. You will recieve a confirmation email with the code you'll need to log into your host.
+        .col-sm-4
+          h2.text-center 
+            i.icon.ion-ios-cloud-download 
+            | Confirm & Pay
+          br
+          p.lead An Omny agent will connect with you to confirm your booking, do a test drive, and collect payment.
+        .col-sm-4
+          h2.text-center 
+            i.icon.ion-radio-waves 
+            | Telepresence
+          br
+          p.lead Use your invitation link to log into your host and begin. When you are done, leave review of your experience. If you aren't 100% satisfied, we'll give you your money back.
+
+  section
     .container
       .row
         h2.text-center Compare Telepresencing to Flying
@@ -104,29 +109,6 @@ block content
               | 16 Hours away from your life
     br
     br
-  section
-    .container
-      h2.text-center How Omny Works
-      br
-      .row
-        .col-sm-4
-          h2.text-center 
-            i.icon.ion-calendar 
-            | Schedule your Trip
-          br
-          p.lead #[a(href="/bookings/new") Book your trip] online at least 24 hours in advance. You will recieve a confirmation email with the code you'll need to log into your host.
-        .col-sm-4
-          h2.text-center 
-            i.icon.ion-ios-cloud-download 
-            | Confirm & Pay
-          br
-          p.lead An Omny agent will connect with you to confirm your booking, do a test drive, and collect payment.
-        .col-sm-4
-          h2.text-center 
-            i.icon.ion-radio-waves 
-            | Telepresence
-          br
-          p.lead Use your invitation link to log into your host and begin. When you are done, leave review of your experience. If you aren't 100% satisfied, we'll give you your money back.
   hr
   section
     .container
